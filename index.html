@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img src="PicLD1.png" alt="Shoe Image" class="top-image">leapdeck
+    <div class="header-container">
+        <img src="PicLD1.png" alt="Shoe Image" class="top-image">
+        <span class="brand-name">leapdeck</span>
+    </div>
     <div class="container">
         <!-- Desktop Layout -->
         <div class="desktop-layout">
@@ -16,11 +19,12 @@
                 <img src="sp1.png" alt="Image 1" class="left-image height=170 width=170" >
                 <img src="sp3.png" alt="Image 2" class="left-image height=170 width=170">
                 <img src="sp2.png" alt="Image 3" class="left-image height=170 width=170">
+                <img src="sp4.png" alt="Image 3" class="left-image height=170 width=170">
             </div>
 
             <!-- Main Content Column -->
             <div class="column main-content">
-                <h2>Overview</h2>
+                <h2>Overview : Apps with A.I.</h2>
                 <ul>
                     <li>Draw a rough draft of your app idea on paper or a paint tool : layout screens, buttons and features. </li>
                     <li>Make a first draft by describing with prompts to <a href="https://v0.dev/" target="_blank">v0.dev</a> or <a href="https://bolt.new/" target="_blank">bolt.new</a>, then make sure to select "Deploy" so it gives you a sample page link.</li>
@@ -34,7 +38,7 @@
                     <br>
                     <li>Open <a href="https://www.cursor.com/" target="_blank">Cursor</a> or <a href="https://windsurf.com/" target="_blank">Windsurf</a> and have it open the main folder of the <a href="https://developer.android.com/studio" target="_blank">Android Studio</a> or <a href="https://apps.apple.com/us/app/xcode/id497799835" target="_blank">Xcode</a> project you've started.</li>
                     <br>
-                    <li>With the description you provided to <a href="https://v0.dev/" target="_blank">v0.dev</a> or <a href="https://bolt.new/" target="_blank">bolt.new</a>, copy the text of those instructions with sample link, then paste it into <a href="https://www.cursor.com/" target="_blank">Cursor</a> to start the initial layout for you. Make sure in the text to say whether you want it in "Swift UI" or "Flutter".</li>
+                    <li>With the description you provided to <a href="https://v0.dev/" target="_blank">v0.dev</a> or <a href="https://bolt.new/" target="_blank">bolt.new</a>, copy the text of those instructions with sample link, then paste it into <a href="https://www.cursor.com/" target="_blank">Cursor</a> to start the initial layout for you. Also be sure in the text to say "Make a Swift UI app with..." or "Make a Flutter app with...".</li>
                     <br>
                     <li>With <a href="https://www.cursor.com/" target="_blank">Cursor</a> or <a href="https://windsurf.com/" target="_blank">Windsurf</a>, you'll see it adding code for your app.</li>
                     <br>
@@ -119,7 +123,7 @@
             images[currentIndex].classList.add('active');
         }
 
-        setInterval(showNextImage, 2880); // Change image every 2.88 seconds
+        setInterval(showNextImage, 8320); // Change image every 4.32 seconds
 
         // Initialize the first image
         images[currentIndex].classList.add('active');
