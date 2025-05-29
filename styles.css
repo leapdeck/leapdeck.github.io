@@ -1,0 +1,156 @@
+body {
+    text-align: center;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start to respect top margin */
+    padding-top: 0; /* Remove top padding */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Update font family */
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure columns are on a single line */
+    width: 100%; /* Full width of the browser */
+    margin: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Remove all side padding */
+    background-color: transparent; /* Remove white background */
+}
+
+.navigation, .main-content, .sidebar {
+    padding: 20px;
+}
+
+.navigation {
+    flex: 0.2; /* Adjust navigation to 20% */
+    background-color: #d4edda; /* Light green for navigation */
+    border-right: 1px solid #c3e6cb;
+}
+
+.main-content {
+    flex: 1; /* Adjust main content to 30% */
+    background-color: #fff;
+    max-height: 80vh; /* Set maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    text-align: left; /* Left justify text */
+}
+
+.sidebar {
+    flex: 1; /* Adjust sidebar to 30% */
+    background-color: #d4edda;
+    border-left: 1px solid #c3e6cb;
+    padding-right: 40px;
+    max-height: 80vh; /* Set maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    text-align: left; /* Left justify text */
+}
+
+h2 {
+    text-align: center;
+}
+
+.column.main-content h2 {
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .navigation, .main-content, .sidebar {
+        flex: 100%;
+    }
+}
+
+.desktop-layout {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    background-color: #f0fdf4; /* bg-green-100 */
+    padding: 70px; /* Add a cushion of 70px around the columns */
+    padding-top: 30px; /* Ensure top cushion is always 30px */
+    margin-top: 0; /* Remove top margin */
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px; /* Adjust margin for space between columns */
+    background-color: #fff;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%; /* Reduce width by 10% */
+}
+
+.column:first-child {
+    margin-left: 0;
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Set a fixed height for consistency */
+    overflow: hidden;
+    flex: 3; /* Adjust image container to take up 40% */
+}
+
+.left-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Decrease width by 30% */
+    height: 100%; /* Ensure images fill the container */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.left-image.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.left-image.inactive {
+    transform: translateX(100%);
+}
+
+.apps .app p {
+    list-style-type: none; /* Remove default bullet */
+    position: relative;
+    margin-left: 70px; /* Adjust margin for custom bullet */
+}
+
+.apps .app p::before {
+    content: '';
+    position: absolute;
+    left: -20px; /* Position bullet to the left */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.4px; /* Reduced size by 50% */
+    height: 3.4px; /* Reduced size by 50% */
+    border: 2px solid black; /* Outer circle */
+    border-radius: 50%;
+    background-color: white; /* Inner circle color */
+}
+
+.top-image {
+    display: block;
+    margin: 0 auto;
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+} 
