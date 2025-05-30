@@ -238,4 +238,50 @@ a:hover {
 
 .rocher-font {
     font-family: 'Rocher'; /* Apply Rocher font */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width */
+    padding: 0; /* Remove padding */
+}
+
+.column-left, .column-right {
+    flex: 1; /* Equal width for both columns */
+}
+
+.top-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.column-left {
+    position: relative;
+    margin-bottom: 10px; /* Add 10px of whitespace below the bottom line */
+}
+
+.column-left::before,
+.column-left::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px; /* Increase thickness by 70% */
+    background-color: #d4edda; /* Light green color */
+    position: absolute;
+    left: 0;
+}
+
+.column-left::before {
+    top: 0; /* Position the line above the content */
+}
+
+.column-left::after {
+    bottom: 0; /* Position the line below the content */
+}
+
+.brand-name {
+    display: inline-block;
+    padding-bottom: 15px; /* Add 5px padding below the text */
 } 
