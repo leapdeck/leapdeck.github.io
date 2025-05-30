@@ -258,8 +258,13 @@ a:hover {
 }
 
 .column-left {
+    flex: 0.6; /* Set left column to 40% width */
     position: relative;
     margin-bottom: 10px; /* Add 10px of whitespace below the bottom line */
+}
+
+.column-right {
+    flex: 0.4; /* Set right column to 60% width */
 }
 
 .column-left::before,
