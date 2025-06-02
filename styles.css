@@ -19,6 +19,13 @@ h1 {
     margin: 0;
 }
 
+.clearlink { 
+    text-decoration: none;
+    text-decoration-color: black;
+    pointer-events: none;
+    color: white ;
+}
+
 .container {
     display: flex;
     flex-wrap: nowrap; /* Ensure columns are on a single line */
@@ -42,7 +49,7 @@ h1 {
 .main-content {
     flex: 1.44; /* Increase width by 0.5 */
     background-color: #fff;
-    max-height: 80vh; /* Set maximum height */
+    max-height: 144vh; /* Increase height by 30% from 80vh to 104vh */
     overflow-y: auto; /* Enable vertical scrolling */
     text-align: left; /* Left justify text */
 }
@@ -52,7 +59,7 @@ h1 {
     background-color: #d4edda;
     border-left: 1px solid #c3e6cb;
     padding-right: 10px;
-    max-height: 80vh; /* Set maximum height */
+    max-height: 144vh; /* Increase height by 30% from 80vh to 104vh */
     overflow-y: auto; /* Enable vertical scrolling */
     text-align: left; /* Left justify text */
 }
@@ -66,12 +73,12 @@ h2 {
     margin-top: 20px;
 }
 
-a {
-    text-decoration: none;
-}
-
 a:hover {
     text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -85,6 +92,7 @@ a:hover {
 
     .image-container {
         order: 1; /* Display sliding images first */
+        height: 350px; /* Reduce height by 30% from 500px to 350px */
     }
 
     .header-container {
@@ -290,3 +298,30 @@ a:hover {
     display: inline-block;
     padding-bottom: 15px; /* Add 5px padding below the text */
 } 
+
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create 4 columns */
+    grid-template-rows: repeat(4, 1fr); /* Create 4 rows */
+    gap: 10px; /* Space between grid items */
+    margin-top: 20px; /* Add some space above the grid */
+    align-self: flex-end; /* Align the grid to the bottom */
+    margin-left: 40px; /* Move the grid 40px to the right */
+}
+
+.grid-item {
+    background-color: #f0f0f0; /* Light gray background for grid items */
+    border: 1px solid #ccc; /* Border around each grid item */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px; /* Fixed height for grid items */
+    overflow: hidden;
+}
+
+.grid-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensure the image covers the grid item without distortion */
+}
