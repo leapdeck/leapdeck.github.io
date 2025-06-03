@@ -309,13 +309,7 @@ a {
 } 
 
 .grid-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Create 4 columns */
-    grid-template-rows: repeat(2, 1fr); /* Create 4 rows */
-    gap: 10px; /* Space between grid items */
-    margin-top: 20px; /* Add some space above the grid */
-    align-self: flex-end; /* Align the grid to the bottom */
-    margin-left: 40px; /* Move the grid 40px to the right */
+    display: grid; /* Display grid in desktop view */
 }
 
 .grid-item {
@@ -358,7 +352,7 @@ a {
 
     .column {
         margin-bottom: 30px; /* Add space below each column */
-        width: 80%; /* Reduce width by 15% */
+        width: 70%; /* Reduce width by 15% */
     }
 
     .image-container {
@@ -368,5 +362,9 @@ a {
     .grid-item {
         width: 125px; /* Set default width for grid items in mobile view */
         height: 125px; /* Set default height for grid items in mobile view */
+    }
+
+    .grid-section {
+        display: none; /* Hide grid section in mobile view */
     }
 }
