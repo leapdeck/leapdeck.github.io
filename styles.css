@@ -358,7 +358,7 @@ a {
 
     .column {
         margin-bottom: 30px; /* Add space below each column */
-        width: 70%; /* Reduce width by 15% */
+        width: 80%; /* Reduce width by 15% */
     }
 
     .image-container {
