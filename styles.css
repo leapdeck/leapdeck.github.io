@@ -1,87 +1,298 @@
 @font-face {
-  font-family: 'Rocher';
-  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
-}
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Use default font for body */
-  text-align: center;
-  font-size: 16px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Align items to the start to respect top margin */
-  padding-top: 0; /* Remove top padding */
-}
-
-h1 {
-    margin: 0;
-}
-
-.clearlink { 
-    text-decoration: none;
-    text-decoration-color: black;
-    pointer-events: none;
-    color: white ;
-}
-
-.container {
-    display: flex;
-    flex-wrap: nowrap; /* Ensure columns are on a single line */
-    width: 100%; /* Full width of the browser */
-    margin: 0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 30; /* Remove all side padding */
-    background-color: transparent; /* Remove white background */
-}
-
-.navigation, .main-content, .sidebar {
-    padding: 20px;
-}
-
-.navigation {
-    flex: 0.72; /* Adjust navigation to 20% */
-    background-color: #d4edda; /* Light green for navigation */
-    border-right: 1px solid #c3e6cb;
-}
-
-.main-content {
-    flex: 1.44; /* Increase width by 0.5 */
-    background-color: #fff;
-    max-height: 144vh; /* Increase height by 30% from 80vh to 104vh */
-    overflow-y: auto; /* Enable vertical scrolling */
-    text-align: left; /* Left justify text */
-}
-
-.sidebar {
-    flex: 1.24; /* Increase width by 0.5 */
-    background-color: #d4edda;
-    border-left: 1px solid #c3e6cb;
-    padding-right: 10px;
-    max-height: 144vh; /* Increase height by 30% from 80vh to 104vh */
-    overflow-y: auto; /* Enable vertical scrolling */
-    text-align: left; /* Left justify text */
-}
-
-h2 {
-    font-family: 'Rocher'; /* Apply Rocher font to h2 tags */
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Use default font for body */
     text-align: center;
-}
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start to respect top margin */
+    padding-top: 0; /* Remove top padding */
+  }
+  
+  h1 {
+      margin: 0;
+  }
+  
+  .clearlink { 
+      text-decoration: none;
+      text-decoration-color: black;
+      pointer-events: none;
+      color: white ;
+  }
+  
+  .container {
+      display: flex;
+      flex-wrap: nowrap; /* Ensure columns are on a single line */
+      width: 100%; /* Full width of the browser */
+      margin: 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 30; /* Remove all side padding */
+      background-color: transparent; /* Remove white background */
+  }
+  
+  .navigation, .main-content, .sidebar {
+      padding: 20px;
+  }
+  
+  .navigation {
+      flex: 0.72; /* Adjust navigation to 20% */
+      background-color: #d4edda; /* Light green for navigation */
+      border-right: 1px solid #c3e6cb;
+  }
+  
+  .main-content {
+      flex: 1.44; /* Increase width by 0.5 */
+      background-color: #fff;
+      max-height: 144vh; /* Increase height by 30% from 80vh to 104vh */
+      overflow-y: auto; /* Enable vertical scrolling */
+      text-align: left; /* Left justify text */
+  }
+  
+  .sidebar {
+      flex: 1.24; /* Increase width by 0.5 */
+      background-color: #d4edda;
+      border-left: 1px solid #c3e6cb;
+      padding-right: 10px;
+      max-height: 144vh; /* Increase height by 30% from 80vh to 104vh */
+      overflow-y: auto; /* Enable vertical scrolling */
+      text-align: left; /* Left justify text */
+  }
+  
+  h2 {
+      font-family: 'Rocher'; /* Apply Rocher font to h2 tags */
+      text-align: center;
+  }
+  
+  .column.main-content h2 {
+      margin-top: 20px;
+  }
+  
+  a:hover {
+      text-decoration: underline;
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  
+  
+  
+  .desktop-layout {
+      display: flex;
+      justify-content: flex-start; /* Align items to the start */
+      background-color: #f0fdf4; /* Set the same green background as the rest of the page */
+      padding: 10px; /* Add a cushion of 70px around the columns */
+      padding-top: 20px; /* Ensure top cushion is always 30px */
+      margin-top: 0; /* Remove top margin */
+  }
+  
+  .column {
+      flex: 1;
+      margin: 0 10px; /* Adjust margin for space between columns */
+      background-color: #fff;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 90%; /* Reduce width by 10% */
+  }
+  
+  .column:first-child {
+      margin-left: 0;
+      
+  }
+  
+  .column:last-child {
+      margin-right: 0;
+     
+  }
+  
+  .image-container {
+      position: relative;
+      width: 90%;
+      height: 500px; /* Set a fixed height for consistency */
+      overflow: hidden;
+      flex: 2.5; /* Adjust image container to take up 40% */
+  }
+  
+  .left-image {
+      position: absolute;
+      top: 0;
+      left: 60px;
+      width: 100%; /* Increase width by 40% */
+      height: 100%; /* Ensure images fill the container */
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .left-image.active {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  
+  .left-image.inactive {
+      transform: translateX(100%);
+  }
+  
+  .apps .app p {
+      list-style-type: none; /* Remove default bullet */
+      position: relative;
+      margin-left: 70px; /* Adjust margin for custom bullet */
+  }
+  
+  .apps .app p::before {
+      content: '';
+      position: absolute;
+      left: -20px; /* Position bullet to the left */
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3.4px; /* Reduced size by 50% */
+      height: 3.4px; /* Reduced size by 50% */
+      border: 2px solid black; /* Outer circle */
+      border-radius: 50%;
+      background-color: white; /* Inner circle color */
+  }
+  
+  .top-image {
+      display: block;
+      margin: 0 auto;
+      width: 100px; /* Adjust size as needed */
+      height: auto;
+      background-color: #f0fdf4; /* Set the same green background as the rest of the page */
+  }
+  
+  @font-palette-values --Grays {
+    font-family: Rocher;
+    base-palette: 9;
+  }
+  
+  @font-palette-values --Purples {
+    font-family: Rocher;
+    base-palette: 6;
+  }
+  
+  @font-palette-values --Mint {
+    font-family: Rocher;
+    base-palette: 7;
+  }
+  
+  .grays {
+    font-palette: --Grays;
+  }
+  
+  .purples {
+    font-palette: --Purples;
+  }
+  
+  .mint {
+    font-palette: --Mint;
+  }
+  
+  .rocher-font {
+      font-family: 'Rocher'; /* Apply Rocher font */
+  }
+  
+  .header-container {
+      display: flex;
+      justify-content: space-between; /* Space between columns */
+      align-items: center; /* Center vertically */
+      width: 100%; /* Full width */
+      padding: 0; /* Remove padding */
+  }
+  
+  .column-left, .column-right {
+      flex: 1; /* Equal width for both columns */
+  }
+  
+  .top-image {
+      width: 100px; /* Adjust size as needed */
+      height: auto;
+  }
+  
+  .column-left {
+      flex: 0.6; /* Set left column to 40% width */
+      position: relative;
+      margin-bottom: 10px; /* Add 10px of whitespace below the bottom line */
+  }
+  
+  .column-right {
+      flex: 0.4; /* Set right column to 60% width */
+  }
+  
+  .column-left::before,
+  .column-left::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 5px; /* Increase thickness by 70% */
+      background-color: #d4edda; /* Light green color */
+      position: absolute;
+      left: 0;
+  }
+  
+  .column-left::before {
+      top: 0; /* Position the line above the content */
+  }
+  
+  .column-left::after {
+      bottom: 0; /* Position the line below the content */
+  }
+  
+  .brand-name {
+      display: inline-block;
+      padding-bottom: 15px; /* Add 5px padding below the text */
+  } 
+  
+  .grid-section {
+      display: grid; /* Display grid in desktop view */
+  }
+  
+  .grid-item {
+      background-color: #f0f0f0; /* Light gray background for grid items */
+      border: 1px solid #ccc; /* Border around each grid item */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 170px;
+      height: 170px; /* Fixed height for grid items */
+      overflow: hidden;
+  }
+  
+  .grid-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover; /* Ensure the image covers the grid item without distortion */
+  }
+  
+  .grid-desktop {
+      display: grid; /* Ensure grid is displayed */
+      grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
+      grid-template-rows: repeat(2, 1fr); /* Create 2 rows */
+      gap: 10px; /* Space between grid items */
+      margin-top: 20px; /* Add some space above the grid */
+  }
+  
+  .grid-mobile {
+      display: none; /* Hide mobile grid in desktop view */
+  }
 
-.column.main-content h2 {
-    margin-top: 20px;
-}
+  @media (max-width: 768px) {
 
-a:hover {
-    text-decoration: underline;
-}
+        .grid-desktop {
+            display: none; /* Hide desktop grid in mobile view */
+    }
 
-a {
-    text-decoration: none;
-}
+    .column {
+        margin-bottom: 30px; /* Add space below each column */
+        width: 70%; /* Reduce width by 15% */
+    }
 
-@media (max-width: 768px) {
     .navigation, .main-content, .sidebar {
         flex: 100%;
     }
@@ -89,6 +300,7 @@ a {
     .desktop-layout {
         flex-direction: column; /* Stack elements vertically */
     }
+
 
     .image-container {
         order: 1; /* Display sliding images first */
@@ -127,6 +339,14 @@ a {
         order: 4; /* Display second column fourth */
     }
 
+    .grid-mobile {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
+        grid-template-rows: repeat(2, 1fr); 
+        gap: 5px; 
+        order: 5; 
+        }
+
     .column {
         margin-bottom: 30px; /* Add space below each column */
         width: 85%; /* Reduce width by 15% */
@@ -136,235 +356,9 @@ a {
         margin-bottom: 30px; /* Add space below the image container */
     }
 
-    .grid-item {
-        width: 125px; /* Set default width for grid items in mobile view */
-        height: 125px; /* Set default height for grid items in mobile view */
+    .grid-item2 {
+        width: 175px; /* Set default width for grid items in mobile view */
+        height: 175px; /* Set default height for grid items in mobile view */
     }
 }
 
-.desktop-layout {
-    display: flex;
-    justify-content: flex-start; /* Align items to the start */
-    background-color: #f0fdf4; /* Set the same green background as the rest of the page */
-    padding: 10px; /* Add a cushion of 70px around the columns */
-    padding-top: 20px; /* Ensure top cushion is always 30px */
-    margin-top: 0; /* Remove top margin */
-}
-
-.column {
-    flex: 1;
-    margin: 0 10px; /* Adjust margin for space between columns */
-    background-color: #fff;
-    border: 1px solid #c3e6cb;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 90%; /* Reduce width by 10% */
-}
-
-.column:first-child {
-    margin-left: 0;
-    
-}
-
-.column:last-child {
-    margin-right: 0;
-   
-}
-
-.image-container {
-    position: relative;
-    width: 90%;
-    height: 500px; /* Set a fixed height for consistency */
-    overflow: hidden;
-    flex: 2.5; /* Adjust image container to take up 40% */
-}
-
-.left-image {
-    position: absolute;
-    top: 0;
-    left: 60px;
-    width: 100%; /* Increase width by 40% */
-    height: 100%; /* Ensure images fill the container */
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.left-image.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.left-image.inactive {
-    transform: translateX(100%);
-}
-
-.apps .app p {
-    list-style-type: none; /* Remove default bullet */
-    position: relative;
-    margin-left: 70px; /* Adjust margin for custom bullet */
-}
-
-.apps .app p::before {
-    content: '';
-    position: absolute;
-    left: -20px; /* Position bullet to the left */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3.4px; /* Reduced size by 50% */
-    height: 3.4px; /* Reduced size by 50% */
-    border: 2px solid black; /* Outer circle */
-    border-radius: 50%;
-    background-color: white; /* Inner circle color */
-}
-
-.top-image {
-    display: block;
-    margin: 0 auto;
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-    background-color: #f0fdf4; /* Set the same green background as the rest of the page */
-}
-
-@font-palette-values --Grays {
-  font-family: Rocher;
-  base-palette: 9;
-}
-
-@font-palette-values --Purples {
-  font-family: Rocher;
-  base-palette: 6;
-}
-
-@font-palette-values --Mint {
-  font-family: Rocher;
-  base-palette: 7;
-}
-
-.grays {
-  font-palette: --Grays;
-}
-
-.purples {
-  font-palette: --Purples;
-}
-
-.mint {
-  font-palette: --Mint;
-}
-
-.rocher-font {
-    font-family: 'Rocher'; /* Apply Rocher font */
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between; /* Space between columns */
-    align-items: center; /* Center vertically */
-    width: 100%; /* Full width */
-    padding: 0; /* Remove padding */
-}
-
-.column-left, .column-right {
-    flex: 1; /* Equal width for both columns */
-}
-
-.top-image {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-}
-
-.column-left {
-    flex: 0.6; /* Set left column to 40% width */
-    position: relative;
-    margin-bottom: 10px; /* Add 10px of whitespace below the bottom line */
-}
-
-.column-right {
-    flex: 0.4; /* Set right column to 60% width */
-}
-
-.column-left::before,
-.column-left::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px; /* Increase thickness by 70% */
-    background-color: #d4edda; /* Light green color */
-    position: absolute;
-    left: 0;
-}
-
-.column-left::before {
-    top: 0; /* Position the line above the content */
-}
-
-.column-left::after {
-    bottom: 0; /* Position the line below the content */
-}
-
-.brand-name {
-    display: inline-block;
-    padding-bottom: 15px; /* Add 5px padding below the text */
-} 
-
-.grid-section {
-    display: grid; /* Display grid in desktop view */
-}
-
-.grid-item {
-    background-color: #f0f0f0; /* Light gray background for grid items */
-    border: 1px solid #ccc; /* Border around each grid item */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-    height: 170px; /* Fixed height for grid items */
-    overflow: hidden;
-}
-
-.grid-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; /* Ensure the image covers the grid item without distortion */
-}
-
-.grid-desktop {
-    display: grid; /* Ensure grid is displayed */
-    grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
-    grid-template-rows: repeat(2, 1fr); /* Create 2 rows */
-    gap: 10px; /* Space between grid items */
-    margin-top: 20px; /* Add some space above the grid */
-}
-
-.grid-mobile {
-    display: none; /* Hide mobile grid in desktop view */
-}
-
-@media (max-width: 768px) {
-    .grid-desktop {
-        display: none; /* Hide desktop grid in mobile view */
-    }
-
-    .grid-mobile {
-        display: grid; /* Display mobile grid in mobile view */
-    }
-
-    .column {
-        margin-bottom: 30px; /* Add space below each column */
-        width: 70%; /* Reduce width by 15% */
-    }
-
-    .image-container {
-        margin-bottom: 30px; /* Add space below the image container */
-    }
-
-    .grid-item {
-        width: 125px; /* Set default width for grid items in mobile view */
-        height: 125px; /* Set default height for grid items in mobile view */
-    }
-
-    .grid-section {
-        display: none; /* Hide grid section in mobile view */
-    }
-}
