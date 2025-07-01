@@ -116,7 +116,7 @@
   .image-container {
       position: relative;
       width: 90%;
-      height: 500px; /* Set a fixed height for consistency */
+      height: 350px; /* Set a fixed height for consistency */
       overflow: hidden;
       flex: 2.5; /* Adjust image container to take up 40% */
   }
