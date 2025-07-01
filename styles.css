@@ -282,6 +282,54 @@
       display: none; /* Hide mobile grid in desktop view */
   }
 
+
+.form-section {
+    margin-top: 20px; /* Add space above the form */
+    text-align: center; /* Center the form */
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: row; /* Change to horizontal layout */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between form elements */
+}
+
+.form-section input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Set width for the email input */
+}
+
+.form-section button {
+    padding: 10px 20px;
+    background-color: #d4edda; /* Light green background */
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+    background-color: #c3e6cb; /* Darker green on hover */
+}
+
+.form-section button.submitted {
+    background-color: #2d5a2d; /* Dark green when submitted */
+    color: white; /* White text for better contrast */
+    cursor: default; /* Remove pointer cursor */
+}
+
+.thank-you-message {
+    margin-top: 15px; /* Add space above the message */
+    color: #05d03d/* Regular green color */
+    font-weight: bold; /* Make the text bold */
+    font-size: 14px; /* Set appropriate font size */
+    text-align: center; /* Center the message */
+}
+
   @media (max-width: 768px) {
 
         .grid-desktop {
@@ -311,6 +359,8 @@
         order: 2; /* Display shoe logo second */
     }
 
+
+
     .main-content {
         order: 3; /* Display first column third */
         margin-bottom: 100px; /* Add 100px of space below the first column */
@@ -339,13 +389,19 @@
         order: 4; /* Display second column fourth */
     }
 
+    .form-section {
+        order: 5;
+     }
+
     .grid-mobile {
         display: grid; 
         grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
         grid-template-rows: repeat(2, 1fr); 
         gap: 5px; 
-        order: 5; 
+        order: 6; 
         }
+
+
 
     .column {
         margin-bottom: 30px; /* Add space below each column */
@@ -361,4 +417,3 @@
         height: 175px; /* Set default height for grid items in mobile view */
     }
 }
-
