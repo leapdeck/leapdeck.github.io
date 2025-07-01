@@ -52,6 +52,45 @@
                             <a href="https://www.codenewbie.org/" target="blank"><img src="cnewbie.png" alt="Image 4" class="grid-image"></a>
                         </div>
                     </div>
+
+                    <!-- Form Section -->
+                    <div class="form-section">
+                        Join our free coding and A.I.-based</br> development mailing list for monthly insights.</br> </br> 
+                          
+                        <form name="submit-to-google-sheet">
+                            <input name="email" type="email" placeholder="Email" required>
+                            <button type="submit">Sign-up</button>
+                        </form>
+
+                        <script>
+                            const scriptURL = 'https://script.google.com/macros/s/AKfycbzrnCuWNsdFHS2M2rgE2cihPLWJAduwRfGjvZrIPkY2cJ5QX8u2MrQ984au5l3SKJLS/exec'
+                            const form = document.forms['submit-to-google-sheet']
+                            const submitButton = form.querySelector('button[type="submit"]')
+                            const formSection = document.querySelector('.form-section')
+                          
+                            form.addEventListener('submit', e => {
+                              e.preventDefault()
+                              submitButton.classList.add('submitted')
+                              submitButton.textContent = 'Sign-up'
+                              
+                              // Remove any existing thank you message
+                              const existingMessage = formSection.querySelector('.thank-you-message')
+                              if (existingMessage) {
+                                  existingMessage.remove()
+                              }
+                              
+                              // Create and show thank you message
+                              const thankYouMessage = document.createElement('div')
+                              thankYouMessage.className = 'thank-you-message'
+                              thankYouMessage.textContent = "Thank you for subscribing."
+                              formSection.appendChild(thankYouMessage)
+                              
+                              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                                .then(response => console.log('Success!', response))
+                                .catch(error => console.error('Error!', error.message))
+                            })
+                          </script>
+                    </div>
                 </div>
             <!-- Main Content Column -->
             <div class="column main-content">
