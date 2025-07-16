@@ -134,6 +134,61 @@
                             })
                           </script>
                     </div>
+
+                    <!-- Articles Column -->
+                    <div class="articles-section">
+                        <h3>Latest Articles</h3>
+                        <div id="articles-list">
+                            <!-- Articles will be loaded here by JavaScript -->
+                        </div>
+                    </div>
+
+                    <script>
+                        // Load and display articles from embedded JSON data
+                        const articlesData = [
+                            {
+                                "site": "TechCrunch",
+                                "title": "AI Startups Are Booming in 2025",
+                                "link": "https://techcrunch.com/ai-startups-2025"
+                            },
+                            {
+                                "site": "The Verge",
+                                "title": "The Future of Smart Devices",
+                                "link": "https://www.theverge.com/future-smart-devices"
+                            },
+                            {
+                                "site": "Wired",
+                                "title": "Inside the Neural Network Revolution",
+                                "link": "https://www.wired.com/neural-network-revolution"
+                            },
+                            {
+                                "site": "Ars Technica",
+                                "title": "Quantum Computing Breakthrough Announced",
+                                "link": "https://arstechnica.com/quantum-breakthrough"
+                            }
+                        ];
+                        
+                        const articlesList = document.getElementById('articles-list');
+                        
+                        articlesData.forEach(article => {
+                            const articleEntry = document.createElement('div');
+                            articleEntry.className = 'article-entry';
+                            
+                            const siteSpan = document.createElement('span');
+                            siteSpan.className = 'article-site';
+                            siteSpan.textContent = article.site + ' : ';
+                            
+                            const titleLink = document.createElement('a');
+                            titleLink.className = 'article-title';
+                            titleLink.href = article.link;
+                            titleLink.target = '_blank';
+                            titleLink.textContent = article.title;
+                            
+                            articleEntry.appendChild(siteSpan);
+                            articleEntry.appendChild(titleLink);
+                            articlesList.appendChild(articleEntry);
+                        });
+                    </script>
                 </div>
             <!-- Main Content Column -->
             <div class="column main-content">
