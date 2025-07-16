@@ -49,7 +49,7 @@
   .main-content {
       flex: 1.44; /* Increase width by 0.5 */
       background-color: #fff;
-      max-height: 144vh; /* Increase height by 30% from 80vh to 104vh */
+      max-height:148vh; /* Increase height by 30% from 80vh to 104vh */
       overflow-y: auto; /* Enable vertical scrolling */
       text-align: left; /* Left justify text */
   }
@@ -59,7 +59,7 @@
       background-color: #d4edda;
       border-left: 1px solid #c3e6cb;
       padding-right: 10px;
-      max-height: 144vh; /* Increase height by 30% from 80vh to 104vh */
+      max-height:148vh; /* Increase height by 30% from 80vh to 104vh */
       overflow-y: auto; /* Enable vertical scrolling */
       text-align: left; /* Left justify text */
   }
@@ -324,10 +324,93 @@
 
 .thank-you-message {
     margin-top: 15px; /* Add space above the message */
-    color: #05d03d/* Regular green color */
+    color: #05d03d; /* Regular green color */
     font-weight: bold; /* Make the text bold */
     font-size: 14px; /* Set appropriate font size */
     text-align: center; /* Center the message */
+}
+
+.articles-section {
+    margin-top: 30px; /* Add space above the articles section */
+    text-align: left; /* Left align the articles */
+}
+
+.articles-section h3 {
+    color: #2d5a2d; /* Dark green color for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+    font-size: 18px; /* Larger font for the heading */
+}
+
+.article-entry {
+    margin-bottom: 12px; /* Space between articles */
+    padding: 8px 0; /* Vertical padding for each article */
+    border-bottom: 1px solid #e0e0e0; /* Light border between articles */
+}
+
+.article-entry:last-child {
+    border-bottom: none; /* Remove border from last article */
+}
+
+.article-site {
+    font-weight: bold;
+    color: #666; /* Gray color for site name */
+    margin-right: 8px; /* Space between site and title */
+}
+
+.article-title {
+    color: #2d5a2d; /* Dark green color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.article-title:hover {
+    color: #05d03d; /* Lighter green on hover */
+    text-decoration: underline;
+}
+
+.articles-column {
+    flex: 1; /* Equal width for the articles column */
+    margin: 0 10px; /* Adjust margin for space between columns */
+    background-color: #fff;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%; /* Reduce width by 10% */
+    max-height: 144vh; /* Increase height by 30% from 80vh to 104vh */
+    overflow-y: auto; /* Enable vertical scrolling */
+    text-align: left; /* Left justify text */
+}
+
+.articles-card {
+    width: 350px;
+    height: 270px;
+    background-color: #fff;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-top: 20px;
+    text-align: left;
+    overflow-y: auto;
+   /* position: relative; */
+}
+
+.articles-card h3 {
+    color: #2d5a2d;
+    margin-bottom: 5px;
+    height: 30px;
+    margin-top: 5px;
+    font-size: 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 3px 0;
+    margin-top: 0;
+    z-index: 10;
+    border-top: 1px solid #c3e6cb;
+    border-bottom: 1px solid #c3e6cb;
 }
 
   @media (max-width: 768px) {
@@ -358,8 +441,6 @@
     .header-container {
         order: 2; /* Display shoe logo second */
     }
-
-
 
     .main-content {
         order: 3; /* Display first column third */
@@ -401,8 +482,6 @@
         order: 6; 
         }
 
-
-
     .column {
         margin-bottom: 30px; /* Add space below each column */
         width: 85%; /* Reduce width by 15% */
@@ -416,4 +495,22 @@
         width: 175px; /* Set default width for grid items in mobile view */
         height: 175px; /* Set default height for grid items in mobile view */
     }
+
+    .articles-card {
+        width: 90%; /* Make it responsive to screen width */
+        max-width: 350px; /* Keep maximum width for larger screens */
+        margin: 20px auto; /* Center the card horizontally */
+        height: auto; /* Allow height to adjust to content */
+        min-height: 150px;
+        max-height: 250px; /* Reduced by 40% from 250px to 150px */
+        order: 10; /* Position at the very bottom after all other elements */
+        margin-bottom: 50px; /* Add extra bottom margin to ensure it's at the bottom */
+    }
+
+    .articles-card h3 {
+        font-size: 14px; /* Slightly smaller font for mobile */
+        padding: 5px 0; /* Adjust padding for mobile */
+        height: 25px; /* Reduce height for mobile */
+    }
 }
+
