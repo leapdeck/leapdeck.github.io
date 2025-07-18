@@ -281,6 +281,10 @@
   .grid-mobile {
       display: none; /* Hide mobile grid in desktop view */
   }
+  
+   .form-section-mobile {
+   display : none;
+   }
 
 .form-section {
     margin-top: 20px; /* Add space above the form */
@@ -330,12 +334,12 @@
 }
 
   
-  .articles-desktop {
-  
+.articles-desktop {
+    display: block; /* Show on desktop */
 }
-  
-  .articles-mobile {
-      display: none; /* Hide mobile grid in desktop view */
+ 
+.articles-section-mobile {
+    display: none; /* Hide on desktop */
 }
 
 .articles-section {
@@ -423,7 +427,7 @@
 
   @media (max-width: 768px) {
 
-        .grid-desktop {
+    .grid-desktop {
             display: none; /* Hide desktop grid in mobile view */
     }
 
@@ -479,33 +483,78 @@
     }
 
     .form-section {
-        order: 5;
-     }
+        display: none;
+    }
+    
+    .form-section-mobile {
+        order: 6;
+        margin-top: 20px; /* Add space above the form */
+        text-align: center; /* Center the form */
+    }
+
+    .form-section-mobile form {
+        display: flex;
+        flex-direction: row; /* Change to horizontal layout */
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Space between form elements */
+    }
+
+    .form-section-mobile input[type="email"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 200px; /* Set width for the email input */
+    }
+
+    .form-section-mobile button {
+        padding: 10px 20px;
+        background-color: #d4edda; /* Light green background */
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
      
-     .articles-section {
+     .articles-card {
      	 display: none; 
      }
      
- 	.articlesmobile-card {
- 		order: 5;
-        width: 90%; /* Make it responsive to screen width */
-        max-width: 350px; /* Keep maximum width for larger screens */
+ 	.articles-section-mobile {
+        display: block; /* Show mobile articles section */
+ 		order: 7;
+        width: 350px;
+        height: 270px;
+        background-color: #fff;
+        border: 1px solid #c3e6cb;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
         margin: 20px auto; /* Center the card horizontally */
-        height: auto; /* Allow height to adjust to content */
-        min-height: 150px;
-        max-height: 250px; /* Reduced by 40% from 250px to 150px */
-        order: 10; /* Position at the very bottom after all other elements */
+        text-align: left;
+        overflow-y: auto;
         margin-bottom: 50px; /* Add extra bottom margin to ensure it's at the bottom */
     }
 
-    .articlesmobile-card h3 {
-        font-size: 14px; /* Slightly smaller font for mobile */
-        padding: 5px 0; /* Adjust padding for mobile */
-        height: 25px; /* Reduce height for mobile */
+    .articles-section-mobile h3 {
+     color: #2d5a2d;
+    margin-bottom: 5px;
+    height: 30px;
+    margin-top: 5px;
+    font-size: 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 3px 0;
+    margin-top: 0;
+    z-index: 10;
+    border-top: 1px solid #c3e6cb;
+    border-bottom: 1px solid #c3e6cb;
     }
 
     .grid-mobile {
-   		order: 6; 
+   		order: 8; 
         display: grid; 
         grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
         grid-template-rows: repeat(2, 1fr); 

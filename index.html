@@ -137,7 +137,7 @@
 
                     <!-- Articles Card -->
                     <div class="articles-card">
-                        <h3>Latest Tech News from Black Hubs</h3>
+                        <h3>Latest Tech News</h3>
                         <div id="articles-list">
                             <!-- Articles will be loaded here by JavaScript -->
                         </div>
@@ -266,6 +266,88 @@
                     You can also <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo"  target="_blank">fork the repo</a> to revise your own version. 
                 </div>
             </div>
+            
+    			<!-- Articles Mobile Card -->
+    			
+                	<div class="articles-section-mobile">
+                        <h3>Latest Tech News</h3>
+                        <div id="articles-list-mobile">
+                            <!-- Articles will be loaded here by JavaScript -->
+                        </div>
+
+                        <script>
+                            // Load and display articles from JSON file for mobile
+                            fetch('articlelist1.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    const articlesList = document.getElementById('articles-list-mobile');
+                                    
+                                    data.forEach(article => {
+                                        const articleEntry = document.createElement('div');
+                                        articleEntry.className = 'article-entry';
+                                        
+                                        const siteSpan = document.createElement('span');
+                                        siteSpan.className = 'article-site';
+                                        siteSpan.textContent = article.site + ' : ';
+                                        
+                                        const titleLink = document.createElement('a');
+                                        titleLink.className = 'article-title';
+                                        titleLink.href = article.link;
+                                        titleLink.target = '_blank';
+                                        titleLink.textContent = article.title;
+                                        
+                                        articleEntry.appendChild(siteSpan);
+                                        articleEntry.appendChild(titleLink);
+                                        articlesList.appendChild(articleEntry);
+                                    });
+                                })
+                                .catch(error => {
+                                    console.error('Error loading articles:', error);
+                                    const articlesList = document.getElementById('articles-list-mobile');
+                                    articlesList.innerHTML = '<p>Unable to load articles at this time.</p>';
+                                });
+                        </script>
+                    </div>
+                    
+                    <!-- Form Section Mobile -->
+                      
+                    <div class="form-section-mobile">
+                        Join our free coding and A.I.-based</br> development mailing list for monthly insights.</br> </br> 
+                          
+                        <form name="submit-to-google-sheet-mobile">
+                            <input name="email" type="email" placeholder="Email" required>
+                            <button type="submit">Sign-up</button>
+                        </form>
+
+                        <script>
+                            const scriptURLMobile = 'https://script.google.com/macros/s/AKfycbzrnCuWNsdFHS2M2rgE2cihPLWJAduwRfGjvZrIPkY2cJ5QX8u2MrQ984au5l3SKJLS/exec'
+                            const formMobile = document.forms['submit-to-google-sheet-mobile']
+                            const submitButtonMobile = formMobile.querySelector('button[type="submit"]')
+                            const formSectionMobile = document.querySelector('.form-section-mobile')
+                          
+                            formMobile.addEventListener('submit', e => {
+                              e.preventDefault()
+                              submitButtonMobile.classList.add('submitted')
+                              submitButtonMobile.textContent = 'Sign-up'
+                              
+                              // Remove any existing thank you message
+                              const existingMessage = formSectionMobile.querySelector('.thank-you-message')
+                              if (existingMessage) {
+                                  existingMessage.remove()
+                              }
+                              
+                              // Create and show thank you message
+                              const thankYouMessage = document.createElement('div')
+                              thankYouMessage.className = 'thank-you-message'
+                              thankYouMessage.textContent = "Thank you for subscribing."
+                              formSectionMobile.appendChild(thankYouMessage)
+                              
+                              fetch(scriptURLMobile, { method: 'POST', body: new FormData(formMobile)})
+                                .then(response => console.log('Success!', response))
+                                .catch(error => console.error('Error!', error.message))
+                            })
+                          </script>
+                    </div>
 
             <div class="grid-mobile">
                 <div class="grid-item2">
