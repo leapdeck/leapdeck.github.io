@@ -488,6 +488,7 @@
     
     .form-area-mobile {
         order: 6;
+        display: block;
         margin-top: 20px; /* Add space above the form */
         text-align: center; /* Center the form */
     }
