@@ -504,7 +504,7 @@
         display: block; /* Show mobile card container */
         order: 5;
         width: 90%;
-        max-width: 400px;
+        max-width: 380px;
         margin: 20px auto;
         background-color: #fff;
         border: 1px solid #e0e0e0;
