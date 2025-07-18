@@ -56,7 +56,7 @@
         <div class="column-left">
         
             <a href="http://leapdeck.org"><img src="PicLD1.png" alt="Shoe Image" class="top-image">
-            <span class="brand-name">leapdeck : Happy Juneteenth!</span><br></a>
+            <span class="brand-name">leapdeck</span><br></a>
         </div>
     </div>
     <div class="container">
@@ -136,8 +136,8 @@
                     </div>
 
                     <!-- Articles Card -->
+                    <h3 class="articles-title">Latest Tech News</h3>
                     <div class="articles-card">
-                        <h3>Latest Tech News</h3>
                         <div id="articles-list">
                             <!-- Articles will be loaded here by JavaScript -->
                         </div>
@@ -172,6 +172,47 @@
                                     console.error('Error loading articles:', error);
                                     const articlesList = document.getElementById('articles-list');
                                     articlesList.innerHTML = '<p>Unable to load articles at this time.</p>';
+                                });
+                        </script>
+                    </div>
+
+                    <!-- Desktop Card Container -->
+                    <div class="desktop-card-container">
+                        <h3 class="desktop-card-title">AI Coding Assistants</h3>
+                        <div id="desktop-sites-list">
+                            <!-- Sites will be loaded here by JavaScript -->
+                        </div>
+
+                        <script>
+                            // Load and display sites from JSON file for desktop
+                            fetch('cassistlist.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    const sitesList = document.getElementById('desktop-sites-list');
+                                    
+                                    data.forEach(site => {
+                                        const siteEntry = document.createElement('div');
+                                        siteEntry.className = 'desktop-site-entry';
+                                        
+                                        const siteLink = document.createElement('a');
+                                        siteLink.className = 'desktop-site-name';
+                                        siteLink.href = site.url;
+                                        siteLink.target = '_blank';
+                                        siteLink.textContent = site.name;
+                                        
+                                        const siteDescription = document.createElement('p');
+                                        siteDescription.className = 'desktop-site-description';
+                                        siteDescription.textContent = site.description;
+                                        
+                                        siteEntry.appendChild(siteLink);
+                                        siteEntry.appendChild(siteDescription);
+                                        sitesList.appendChild(siteEntry);
+                                    });
+                                })
+                                .catch(error => {
+                                    console.error('Error loading sites:', error);
+                                    const sitesList = document.getElementById('desktop-sites-list');
+                                    sitesList.innerHTML = '<p>Unable to load resources at this time.</p>';
                                 });
                         </script>
                     </div>
@@ -267,10 +308,51 @@
                 </div>
             </div>
             
+                    <!-- Mobile Card Container -->
+                    <div class="mobile-card-container">
+                        <h3 class="card-container-title">AI CodingAssistants</h3>
+                        <div id="mobile-sites-list">
+                            <!-- Sites will be loaded here by JavaScript -->
+                        </div>
+
+                        <script>
+                            // Load and display sites from JSON file
+                            fetch('cassistlist.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    const sitesList = document.getElementById('mobile-sites-list');
+                                    
+                                    data.forEach(site => {
+                                        const siteEntry = document.createElement('div');
+                                        siteEntry.className = 'site-entry';
+                                        
+                                        const siteLink = document.createElement('a');
+                                        siteLink.className = 'site-name';
+                                        siteLink.href = site.url;
+                                        siteLink.target = '_blank';
+                                        siteLink.textContent = site.name;
+                                        
+                                        const siteDescription = document.createElement('p');
+                                        siteDescription.className = 'site-description';
+                                        siteDescription.textContent = site.description;
+                                        
+                                        siteEntry.appendChild(siteLink);
+                                        siteEntry.appendChild(siteDescription);
+                                        sitesList.appendChild(siteEntry);
+                                    });
+                                })
+                                .catch(error => {
+                                    console.error('Error loading sites:', error);
+                                    const sitesList = document.getElementById('mobile-sites-list');
+                                    sitesList.innerHTML = '<p>Unable to load resources at this time.</p>';
+                                });
+                        </script>
+                    </div>
+                    
     			<!-- Articles Mobile Card -->
     			
+                    <h3 class="articles-toptext-mobile">Latest Tech News</h3>
                 	<div class="articles-section-mobile">
-                        <h3>Latest Tech News</h3>
                         <div id="articles-list-mobile">
                             <!-- Articles will be loaded here by JavaScript -->
                         </div>
