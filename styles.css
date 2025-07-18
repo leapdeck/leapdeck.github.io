@@ -282,7 +282,6 @@
       display: none; /* Hide mobile grid in desktop view */
   }
 
-
 .form-section {
     margin-top: 20px; /* Add space above the form */
     text-align: center; /* Center the form */
@@ -328,6 +327,15 @@
     font-weight: bold; /* Make the text bold */
     font-size: 14px; /* Set appropriate font size */
     text-align: center; /* Center the message */
+}
+
+  
+  .articles-desktop {
+  
+}
+  
+  .articles-mobile {
+      display: none; /* Hide mobile grid in desktop view */
 }
 
 .articles-section {
@@ -473,30 +481,13 @@
     .form-section {
         order: 5;
      }
-
-    .grid-mobile {
-        display: grid; 
-        grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
-        grid-template-rows: repeat(2, 1fr); 
-        gap: 5px; 
-        order: 6; 
-        }
-
-    .column {
-        margin-bottom: 30px; /* Add space below each column */
-        width: 85%; /* Reduce width by 15% */
-    }
-
-    .image-container {
-        margin-bottom: 30px; /* Add space below the image container */
-    }
-
-    .grid-item2 {
-        width: 175px; /* Set default width for grid items in mobile view */
-        height: 175px; /* Set default height for grid items in mobile view */
-    }
-
-    .articles-card {
+     
+     .articles-section {
+     	 display: none; 
+     }
+     
+ 	.articlesmobile-card {
+ 		order: 5;
         width: 90%; /* Make it responsive to screen width */
         max-width: 350px; /* Keep maximum width for larger screens */
         margin: 20px auto; /* Center the card horizontally */
@@ -507,10 +498,33 @@
         margin-bottom: 50px; /* Add extra bottom margin to ensure it's at the bottom */
     }
 
-    .articles-card h3 {
+    .articlesmobile-card h3 {
         font-size: 14px; /* Slightly smaller font for mobile */
         padding: 5px 0; /* Adjust padding for mobile */
         height: 25px; /* Reduce height for mobile */
     }
+
+    .grid-mobile {
+   		order: 6; 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
+        grid-template-rows: repeat(2, 1fr); 
+        gap: 5px; 
+        }
+        
+	.grid-item2 {
+        width: 175px; /* Set default width for grid items in mobile view */
+        height: 175px; /* Set default height for grid items in mobile view */
+    }
+
+    .column {
+        margin-bottom: 30px; /* Add space below each column */
+        width: 85%; /* Reduce width by 15% */
+    }
+
+    .image-container {
+        margin-bottom: 30px; /* Add space below the image container */
+    }
+
 }
 
