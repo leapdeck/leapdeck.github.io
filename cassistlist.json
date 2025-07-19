@@ -30,6 +30,11 @@
     "description": "Coding assistant designed to supercharge your productivity and improveyour workflow."
   },
   {
+    "name": "Firebase Studio",
+    "url": "https://firebase.studio/",
+    "description": "Accelerates your entire development lifecycle with AI agents, builds backends, front ends, and mobile apps."
+  },
+  {
     "name": "Trae",
     "url": "https://www.trae.ai/",
     "description": "AI-powered IDE offering real-time assistance, smart code generation, and productivity."
