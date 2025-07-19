@@ -35,6 +35,16 @@
     "description": "Accelerates your development with AI agents, builds backends, front ends, and mobile apps."
   },
   {
+    "name": "Cline",
+    "url": "https://cline.bot/",
+    "description": "Collaborative AI partner that's open source, fully extensible, and improves developer impact."
+  },
+  {
+    "name": "Aider",
+    "url": "https://aider.chat/",
+    "description": "Lets you pair program with your selected LLM for a new project or build on your existing codebase."
+  },
+  {
     "name": "Trae",
     "url": "https://www.trae.ai/",
     "description": "AI-powered IDE offering real-time assistance, smart code generation, and productivity."
