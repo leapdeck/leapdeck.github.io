@@ -50,6 +50,11 @@
     "description": "AI-powered IDE offering real-time assistance, smart code generation, and productivity."
   },
   {
+    "site": "Kiro",
+    "link": "https://kiro.dev",
+    "article": "An agentic, spec-driven AI IDE that transforms prompts into structured specs, tasks, and code. "
+  },
+  {
     "name": "Replit Agent",
     "url": "https://replit.com",
     "description": "AI assistant for the collaborative browser-based IDE, empowering coding with smart assistance."
