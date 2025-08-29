@@ -184,41 +184,91 @@
 
                     <!-- Desktop Card Container -->
                     <div class="desktop-card-container">
-                        <h3 class="desktop-card-title">AI Coding Assistants</h3>
+                        <h3 class="desktop-card-title">Opensource and Mobile Apps from Black Devs</h3>
                         <div id="desktop-sites-list">
                             <!-- Sites will be loaded here by JavaScript -->
                         </div>
 
                         <script>
-                            // Load and display sites from JSON file for desktop
-                            fetch('cassistlist.json')
+                            // Load and display content from opensourcelist.json for desktop
+                            fetch('opensourcelist.json')
                                 .then(response => response.json())
                                 .then(data => {
                                     const sitesList = document.getElementById('desktop-sites-list');
                                     
-                                    data.forEach(site => {
-                                        const siteEntry = document.createElement('div');
-                                        siteEntry.className = 'desktop-site-entry';
+                                    // Display Opensource Projects first
+                                    const opensourceSection = data.find(section => section.category === "Opensource Devs");
+                                    if (opensourceSection && opensourceSection.items) {
+                                        // Add section header
+                                        const opensourceHeader = document.createElement('h4');
+                                        opensourceHeader.textContent = 'Opensource Projects';
+                                        opensourceHeader.style.marginTop = '20px';
+                                        opensourceHeader.style.marginBottom = '15px';
+                                        opensourceHeader.style.color = '#2d5a2d';
+                                        sitesList.appendChild(opensourceHeader);
                                         
-                                        const siteLink = document.createElement('a');
-                                        siteLink.className = 'desktop-site-name';
-                                        siteLink.href = site.url;
-                                        siteLink.target = '_blank';
-                                        siteLink.textContent = site.name;
+                                        opensourceSection.items.forEach(project => {
+                                            const siteEntry = document.createElement('div');
+                                            siteEntry.className = 'desktop-site-entry';
+                                            
+                                            const siteLink = document.createElement('a');
+                                            siteLink.className = 'desktop-site-name';
+                                            siteLink.href = project.url;
+                                            siteLink.target = '_blank';
+                                            siteLink.textContent = project.name;
+                                            
+                                            const siteDescription = document.createElement('p');
+                                            siteDescription.className = 'desktop-site-description';
+                                            siteDescription.textContent = project.description;
+                                            
+                                            const developerInfo = document.createElement('p');
+                                            developerInfo.className = 'desktop-site-description';
+                                            developerInfo.style.fontSize = '12px';
+                                            developerInfo.style.color = '#888';
+                                            developerInfo.innerHTML = `By <a href="${project.developer_url}" target="_blank">${project.developer}</a>`;
+                                            
+                                            siteEntry.appendChild(siteLink);
+                                            siteEntry.appendChild(siteDescription);
+                                            siteEntry.appendChild(developerInfo);
+                                            sitesList.appendChild(siteEntry);
+                                        });
+                                    }
+                                    
+                                    // Display Mobile Apps
+                                    const mobileSection = data.find(section => section.category === "Mobile Dev Apps");
+                                    if (mobileSection && mobileSection.items) {
+                                        // Add section header
+                                        const mobileHeader = document.createElement('h4');
+                                        mobileHeader.textContent = 'Mobile Apps';
+                                        mobileHeader.style.marginTop = '30px';
+                                        mobileHeader.style.marginBottom = '15px';
+                                        mobileHeader.style.color = '#2d5a2d';
+                                        sitesList.appendChild(mobileHeader);
                                         
-                                        const siteDescription = document.createElement('p');
-                                        siteDescription.className = 'desktop-site-description';
-                                        siteDescription.textContent = site.description;
-                                        
-                                        siteEntry.appendChild(siteLink);
-                                        siteEntry.appendChild(siteDescription);
-                                        sitesList.appendChild(siteEntry);
-                                    });
+                                        mobileSection.items.forEach(app => {
+                                            const siteEntry = document.createElement('div');
+                                            siteEntry.className = 'desktop-site-entry';
+                                            
+                                            const siteLink = document.createElement('a');
+                                            siteLink.className = 'desktop-site-name';
+                                            siteLink.href = app.url;
+                                            siteLink.target = '_blank';
+                                            siteLink.textContent = app.name;
+                                            
+                                            const siteDescription = document.createElement('p');
+                                            siteDescription.className = 'desktop-site-description';
+                                            siteDescription.textContent = app.description;
+                                            
+                                            siteEntry.appendChild(siteLink);
+                                            siteEntry.appendChild(siteDescription);
+                                            sitesList.appendChild(siteEntry);
+                                        });
+                                    }
                                 })
                                 .catch(error => {
-                                    console.error('Error loading sites:', error);
+                                    console.error('Error loading opensourcelist.json:', error);
                                     const sitesList = document.getElementById('desktop-sites-list');
-                                    sitesList.innerHTML = '<p>Unable to load resources at this time.</p>';
+                                    sitesList.innerHTML = '<p>Unable to load content at this time.</p>';
                                 });
                         </script>
                     </div>
@@ -252,6 +302,20 @@
                     <br>
                     <li>Once you're done you can deploy, or side-load, your app to your <a href="https://developer.apple.com/documentation/xcode/distributing-your-app-to-registered-devices"  target="_blank">iOS phone</a> or <a href="https://developer.android.com/studio/run/device"  target="_blank">Android phone</a>. You can also put it up in the <a href="https://developer.apple.com/ios/submit/" target="_blank">Apple</a> or <a href="https://developer.android.com/studio/publish
 "https://developer.android.com/studio/publish" target="_blank">Android</a> Appstore. Each Appstore has a registration process, with yearly payment, to have the app loaded on.</li>
+                    <br>
+                    <li><strong>A.I. Coding Assistants:</strong> Here are some recent A.I. tools to help with your coding:
+                        <ul>
+                            <li><a href="https://v0.dev/" target="_blank">v0 - vercel</a>: Ship quickly with user interface source code, clone existing interfaces, AI-powered customization.</li>
+                            <li><a href="https://windsurf.com" target="_blank">Windsurf AI IDE</a>: Intelligent IDE combining AI agents and intuitive co-pilots for coding efficiency.</li>
+                            <li><a href="https://claude.ai" target="_blank">Claude</a>: A next generation AI assistant built by Anthropic.</li>
+                            <li><a href="https://cursor.so/" target="_blank">Cursor</a>: Enhances VS Code with AI that understands, improves, and writes code.</li>
+                            <li><a href="https://lovable.dev" target="_blank">Lovable</a>: Transforms ideas into apps instantly, using natural language; AI-powered, code ownership guaranteed.</li>
+                            <li><a href="https://github.com/features/copilot" target="_blank">Github Copilot</a>: Coding assistant designed to supercharge your productivity and improve your workflow.</li>
+                            <li><a href="https://www.trae.ai/" target="_blank">Trae</a>: AI-powered IDE offering real-time assistance, smart code generation, and productivity.</li>
+                            <li><a href="https://replit.com" target="_blank">Replit Agent</a>: AI assistant for the collaborative browser-based IDE, empowering coding with smart assistance.</li>
+                            <li><a href="https://aws.amazon.com/appstudio/" target="_blank">AWS App Studio</a>: Generative-AI low-code platform for secure enterprise-grade app creation.</li>
+                        </ul>
+                    </li>
                 </ol>
                 <hr />
                 <div>
@@ -316,41 +380,91 @@
             
                     <!-- Mobile Card Container -->
                     <div class="mobile-card-container">
-                        <h3 class="card-container-title">AI Coding Assistants</h3>
+                        <h3 class="card-container-title">Opensource and Mobile Apps from Black Developers</h3>
                         <div id="mobile-sites-list">
                             <!-- Sites will be loaded here by JavaScript -->
                         </div>
 
                         <script>
-                            // Load and display sites from JSON file
-                            fetch('cassistlist.json')
+                            // Load and display content from opensourcelist.json
+                            fetch('opensourcelist.json')
                                 .then(response => response.json())
                                 .then(data => {
                                     const sitesList = document.getElementById('mobile-sites-list');
                                     
-                                    data.forEach(site => {
-                                        const siteEntry = document.createElement('div');
-                                        siteEntry.className = 'site-entry';
+                                    // Display Opensource Projects first
+                                    const opensourceSection = data.find(section => section.category === "Opensource Devs");
+                                    if (opensourceSection && opensourceSection.items) {
+                                        // Add section header
+                                        const opensourceHeader = document.createElement('h4');
+                                        opensourceHeader.textContent = 'Opensource Projects';
+                                        opensourceHeader.style.marginTop = '20px';
+                                        opensourceHeader.style.marginBottom = '15px';
+                                        opensourceHeader.style.color = '#2d5a2d';
+                                        sitesList.appendChild(opensourceHeader);
                                         
-                                        const siteLink = document.createElement('a');
-                                        siteLink.className = 'site-name';
-                                        siteLink.href = site.url;
-                                        siteLink.target = '_blank';
-                                        siteLink.textContent = site.name;
+                                        opensourceSection.items.forEach(project => {
+                                            const siteEntry = document.createElement('div');
+                                            siteEntry.className = 'site-entry';
+                                            
+                                            const siteLink = document.createElement('a');
+                                            siteLink.className = 'site-name';
+                                            siteLink.href = project.url;
+                                            siteLink.target = '_blank';
+                                            siteLink.textContent = project.name;
+                                            
+                                            const siteDescription = document.createElement('p');
+                                            siteDescription.className = 'site-description';
+                                            siteDescription.textContent = project.description;
+                                            
+                                            const developerInfo = document.createElement('p');
+                                            developerInfo.className = 'site-description';
+                                            developerInfo.style.fontSize = '12px';
+                                            developerInfo.style.color = '#888';
+                                            developerInfo.innerHTML = `By <a href="${project.developer_url}" target="_blank">${project.developer}</a>`;
+                                            
+                                            siteEntry.appendChild(siteLink);
+                                            siteEntry.appendChild(siteDescription);
+                                            siteEntry.appendChild(developerInfo);
+                                            sitesList.appendChild(siteEntry);
+                                        });
+                                    }
+                                    
+                                    // Display Mobile Apps
+                                    const mobileSection = data.find(section => section.category === "Mobile Dev Apps");
+                                    if (mobileSection && mobileSection.items) {
+                                        // Add section header
+                                        const mobileHeader = document.createElement('h4');
+                                        mobileHeader.textContent = 'Mobile Apps';
+                                        mobileHeader.style.marginTop = '30px';
+                                        mobileHeader.style.marginBottom = '15px';
+                                        mobileHeader.style.color = '#2d5a2d';
+                                        sitesList.appendChild(mobileHeader);
                                         
-                                        const siteDescription = document.createElement('p');
-                                        siteDescription.className = 'site-description';
-                                        siteDescription.textContent = site.description;
-                                        
-                                        siteEntry.appendChild(siteLink);
-                                        siteEntry.appendChild(siteDescription);
-                                        sitesList.appendChild(siteEntry);
-                                    });
+                                        mobileSection.items.forEach(app => {
+                                            const siteEntry = document.createElement('div');
+                                            siteEntry.className = 'site-entry';
+                                            
+                                            const siteLink = document.createElement('a');
+                                            siteLink.className = 'site-name';
+                                            siteLink.href = app.url;
+                                            siteLink.target = '_blank';
+                                            siteLink.textContent = app.name;
+                                            
+                                            const siteDescription = document.createElement('p');
+                                            siteDescription.className = 'site-description';
+                                            siteDescription.textContent = app.description;
+                                            
+                                            siteEntry.appendChild(siteLink);
+                                            siteEntry.appendChild(siteDescription);
+                                            sitesList.appendChild(siteEntry);
+                                        });
+                                    }
                                 })
                                 .catch(error => {
-                                    console.error('Error loading sites:', error);
+                                    console.error('Error loading opensourcelist.json:', error);
                                     const sitesList = document.getElementById('mobile-sites-list');
-                                    sitesList.innerHTML = '<p>Unable to load resources at this time.</p>';
+                                    sitesList.innerHTML = '<p>Unable to load content at this time.</p>';
                                 });
                         </script>
                     </div>
