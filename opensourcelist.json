@@ -39,6 +39,13 @@
         "developer_url": "https://github.com/hillc255"
       },
       {
+        "name": "Goose Recipes",
+        "url": "https://github.com/blackgirlbytes/rizels-goose-recipes",
+        "description": "A beautiful web interface for managing and launching Goose AI recipes.",
+        "developer": "blackgirlbytes",
+        "developer_url": "https://github.com/blackgirlbytes"
+      },
+      {
         "name": "Toast",
         "url": "https://github.com/lvndry/toast",
         "description": "The definitive legal document intelligence platform - Transform complex legal documents into clear, actionable insights with AI-powered analysis.",
@@ -51,16 +58,114 @@
         "description": "An unofficial Pesapal API integration for Laravel. This project simplifies connecting to the Pesapal payment platform within Laravel applications.",
         "developer": "brycecandy",
         "developer_url": "https://github.com/bryceandy"
+      },
+      {
+        "name": "Echo Lab",
+        "url": "https://github.com/SMcGregor199/african-american-studies-api",
+        "description": "For the Black Digital Humanities community : Open-source API project designed to support research, education, and creative work rooted in Black intellectual traditions.",
+        "developer": "SMcGregor199",
+        "developer_url": "https://github.com/SMcGregor199"
+      },
+            {
+        "name": "Juneteenth Celebration Clock",
+        "url": "https://github.com/Boweii22/Juneteenth-Freedom-Clock",
+        "description": "A Juneteenth visually rich and interactive web application.",
+        "developer": "Boweii22",
+        "developer_url": "https://github.com/Boweii22"
+      },
+            {
+        "name": "Africa Access Water - Beta Website",
+        "url": "https://github.com/Africa-Access-Water/afaw-beta-website",
+        "description": "A React-based website for Africa Access Water (AFAW), empowering communities in Africa through solar-powered water infrastructure solutions.",
+        "developer": "6upe",
+        "developer_url": "https://github.com/6upe"
+      },
+            {
+        "name": "MP3-Normalizer",
+        "url": "https://github.com/syntaxsdev/MP3-Normalizer",
+        "description": "For DJ's who download lots of music and cannot afford to sort out duplicates or incorrect titles.",
+        "developer": "syntaxsdev",
+        "developer_url": "https://github.com/syntaxsdev"
+      },
+            {
+        "name": "appwrite-lab",
+        "url": "https://github.com/syntaxsdev/appwrite-lab",
+        "description": "Allows you to spin up versioned Appwrite deployments for easy testing via CLI or through code.",
+        "developer": "syntaxsdev",
+        "developer_url": "https://github.com/syntaxsdev"
+      },
+            {
+        "name": "Juneteenth Journey",
+        "url": "https://github.com/KelvinCode1234/Juneteenth-Journey",
+        "description": "A Juneteenth interactive, educational landing page.",
+        "developer": "KelvinCode1234",
+        "developer_url": "https://github.com/KelvinCode1234"
+      },
+                  {
+        "name": "An MCP implementation for Selenium WebDriver",
+        "url": "https://github.com/angiejones/mcp-selenium",
+        "description": "A Model Context Protocol (MCP) server implementation for Selenium WebDriver, enabling browser automation through standardized MCP clients.",
+        "developer": "angiejones",
+        "developer_url": "https://github.com/angiejones"
+      },
+      {
+        "name": "bob",
+        "url": "https://github.com/stephenafamo/bob",
+        "description": "SQL query builder and ORM/Factory generator for Go with support for PostgreSQL, MySQL and SQLites.",
+        "developer": "stephenafamo",
+        "developer_url": "https://github.com/stephenafamo"
+      },
+            {
+        "name": "cartie",
+        "url": "https://github.com/LPMatrix/cartie",
+        "description": "A clean shopping cart implementation for Laravel.",
+        "developer": "LPMatrix",
+        "developer_url": "https://github.com/LPMatrix"
+      },
+            {
+        "name": "Sailboat",
+        "url": "https://github.com/sailscastshq/sailboat",
+        "description": "Sails tooling for VS Code.",
+        "developer": "DominusKelvin",
+        "developer_url": "https://github.com/DominusKelvin"
+      },
+                  {
+        "name": "E-commerce CARA web",
+        "url": "https://github.com/Jo-shua09/e-commerce_web",
+        "description": "An e-commerce website CARA for shopping.",
+        "developer": "jo-shua33",
+        "developer_url": "https://github.com/jo-shua33"
+      },
+      {
+        "name": "Transformers PHP",
+        "url": "https://github.com/CodeWithKyrian/transformers-php",
+        "description": "Transformers PHP is a toolkit for PHP developers to add machine learning magic to their projects easily.",
+        "developer": "CodeWithKyrian",
+        "developer_url": "https://github.com/CodeWithKyrian"
+      },
+            {
+        "name": "MCP Server for GitHub project calendars",
+        "url": "https://github.com/blackgirlbytes/github-calendar-mcp-server",
+        "description": "An MCP Server for GitHub project calendar integration .",
+        "developer": "blackgirlbytes",
+        "developer_url": "https://github.com/blackgirlbytes"
+      },
+            {
+        "name": "Display Medium Posts",
+        "url": "https://github.com/altair-graphql/altair",
+        "description": "Display Medium Posts is a wordpress plugin that allows users display posts from medium.com on any part of their website.",
+        "developer": "acekyd",
+        "developer_url": "https://github.com/acekyd"
       }
     ]
   },
   {
     "category": "Mobile Dev Apps",
     "items": [
-        {
-            "name": "Boba Story",
-            "url": "https://apps.apple.com/us/app/boba-story/id1563575361",
-            "description": "Design your own boba drinks and serve them! Joji, a strawberry forest spirit, shows up and needs your help to restore their old shop."
+      {
+        "name": "Boba Story",
+        "url": "https://apps.apple.com/us/app/boba-story/id1563575361",
+        "description": "Design your own boba drinks and serve them! Joji, a strawberry forest spirit, shows up and needs your help to restore their old shop."
           },
       {
         "name": "Goalsetter: Invest & Bank",
