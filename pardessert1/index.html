@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Paris Desserts - Authentic French Pâtisserie & Desserts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="dessertimgs/desssert1.png" alt="Paris Desserts Logo" class="logo-img">
+                    <span style="font-family: 'Zilla Slab', serif; font-weight: 300;">Paris Desserts</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#services" class="nav-link">Menu <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#services">Pâtisserie Classique</a></li>
+                            <li><a href="#services">Viennoiseries</a></li>
+                            <li><a href="#services">Gâteaux & Petits Fours</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-logo-bg">
+                <img src="dessertimgs/desssert1.png" alt="Paris Desserts" class="hero-logo">
+            </div>
+            <h1 style="font-family: 'Playfair Display', serif; font-weight: 700;">Paris Desserts</h1>
+            <p class="hero-subtitle">Authentic French Pâtisserie · A Taste of Paris</p>
+            <div style="text-align: center; margin: 2rem 0;">
+                <div class="social-media-section" style="width: 100vw; position: relative; left: 50%; right: 0; transform: translateX(-50%); display: flex; gap: 40px; justify-content: center; margin-bottom: 200px; margin-top: 80px; padding-right: 15px;">
+                    <div class="social-icons" style="display: flex; gap: 40px; align-items: center; padding-right: 15px;">
+                        <a href="https://www.instagram.com/parisdesserts/" target="_blank" style="color: #d4af37; font-size: 2rem; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/parisdesserts/" target="_blank" style="color: #d4af37; font-size: 2rem; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-buttons">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Top) -->
+    <section class="gallery" id="gallery-top">
+        <div class="container">
+            <div class="gallery-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/desssert1.png" alt="French Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert2.png" alt="Delicious Desserts" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert3.png" alt="Sweet Treats" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert4.png" alt="Artisan Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert5.png" alt="Gourmet Desserts" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert6.png" alt="French Delicacies" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert7.png" alt="Elegant Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert8.png" alt="Sweet Creations" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert9.png" alt="Pâtisserie Selection" class="carousel-image">
+                        </div>
+                        <!-- Duplicate images for seamless loop -->
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/desssert1.png" alt="French Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert2.png" alt="Delicious Desserts" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert3.png" alt="Sweet Treats" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert4.png" alt="Artisan Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert5.png" alt="Gourmet Desserts" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert6.png" alt="French Delicacies" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert7.png" alt="Elegant Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert8.png" alt="Sweet Creations" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert9.png" alt="Pâtisserie Selection" class="carousel-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="font-family: 'Playfair Display', serif; font-weight: 700;">Our Menu</h2>
+                <p>Handcrafted daily with the finest ingredients and traditional French techniques</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="dessertimgs/dessert2.png" alt="Croissant" class="service-image">
+                    <div class="service-icon"><i class="fas fa-croissant"></i></div>
+                    <h3>Croissant</h3>
+                    <p>Buttery, flaky layers of perfection. Our signature croissants are made fresh each morning with premium French butter.</p>
+                    <div class="price">$4.50</div>
+                </div>
+                <div class="service-card">
+                    <img src="dessertimgs/dessert3.png" alt="Macaron" class="service-image">
+                    <div class="service-icon"><i class="fas fa-cookie"></i></div>
+                    <h3>Macarons (Box of 6)</h3>
+                    <p>Delicate almond meringue cookies in vibrant flavors: raspberry, pistachio, chocolate, vanilla, lemon, and rose.</p>
+                    <div class="price">$6.50</div>
+                </div>
+                <div class="service-card">
+                    <img src="dessertimgs/dessert4.png" alt="Pain au Chocolat" class="service-image">
+                    <div class="service-icon"><i class="fas fa-bread-slice"></i></div>
+                    <h3>Pain au Chocolat</h3>
+                    <p>Flaky viennoiserie pastry filled with rich dark chocolate batons, baked to golden perfection.</p>
+                    <div class="price">$5.00</div>
+                </div>
+                <div class="service-card">
+                    <img src="dessertimgs/dessert5.png" alt="Éclair" class="service-image">
+                    <div class="service-icon"><i class="fas fa-ice-cream"></i></div>
+                    <h3>Éclair</h3>
+                    <p>Light choux pastry filled with silky pastry cream and topped with glossy chocolate or pistachio glaze.</p>
+                    <div class="price">$5.50</div>
+                </div>
+                <div class="service-card">
+                    <img src="dessertimgs/dessert6.png" alt="Tarte au Citron" class="service-image">
+                    <div class="service-icon"><i class="fas fa-lemon"></i></div>
+                    <h3>Tarte au Citron</h3>
+                    <p>Tangy lemon curd nestled in a buttery tart shell, finished with a perfectly torched meringue crown.</p>
+                    <div class="price">$6.00</div>
+                </div>
+                <div class="service-card">
+                    <img src="dessertimgs/dessert7.png" alt="Madeleine" class="service-image">
+                    <div class="service-icon"><i class="fas fa-cookie-bite"></i></div>
+                    <h3>Madeleines (Box of 6)</h3>
+                    <p>Soft, shell-shaped sponge cakes with a hint of lemon zest and vanilla—perfect with tea or coffee.</p>
+                    <div class="price">$5.00</div>
+                </div>
+                <div class="service-card">
+                    <img src="dessertimgs/dessert8.png" alt="Crème Brûlée" class="service-image">
+                    <div class="service-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Crème Brûlée</h3>
+                    <p>Silky vanilla custard with a caramelized sugar crust that cracks perfectly under your spoon.</p>
+                    <div class="price">$6.50</div>
+                </div>
+                <div class="service-card">
+                    <img src="dessertimgs/dessert9.png" alt="Opera Cake" class="service-image">
+                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Opera Cake (Slice)</h3>
+                    <p>Elegant layers of almond sponge, coffee buttercream, and dark chocolate ganache—a true French classic.</p>
+                    <div class="price">$7.00</div>
+                </div>
+                <div class="service-card">
+                    <img src="dessertimgs/desssert1.png" alt="Palmier" class="service-image">
+                    <div class="service-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Palmier</h3>
+                    <p>Crispy, caramelized puff pastry shaped like an elephant ear—sweet, crunchy, and utterly addictive.</p>
+                    <div class="price">$3.50</div>
+                </div>
+                <div class="service-card">
+                    <img src="dessertimgs/dessert2.png" alt="Kouign-Amann" class="service-image">
+                    <div class="service-icon"><i class="fas fa-birthday-cake"></i></div>
+                    <h3>Kouign-Amann</h3>
+                    <p>Buttery Breton pastry with layers of caramelized sugar and a crispy exterior—sweet indulgence at its finest.</p>
+                    <div class="price">$5.50</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="font-family: 'Playfair Display', serif; font-weight: 700;">Gallery</h2>
+            </div>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="https://www.instagram.com/parisdesserts/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <p style="font-size: 1.3rem; color: var(--accent); font-weight: 600; margin: 0; cursor: pointer; transition: color 0.3s ease;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='var(--accent)'">Follow @parisdesserts</p>
+                    <div style="margin-top: 0.5rem;">
+                        <i class="fab fa-instagram" style="font-size: 2rem; color: var(--accent); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert3.png" alt="Artisan Desserts" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert4.png" alt="French Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert5.png" alt="Elegant Treats" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert6.png" alt="Sweet Creations" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert7.png" alt="Delicious Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert8.png" alt="Gourmet Desserts" class="carousel-image">
+                        </div>
+                        <!-- Duplicate images for seamless loop -->
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert3.png" alt="Artisan Desserts" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert4.png" alt="French Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert5.png" alt="Elegant Treats" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert6.png" alt="Sweet Creations" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert7.png" alt="Delicious Pastries" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="dessertimgs/dessert8.png" alt="Gourmet Desserts" class="carousel-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 style="font-family: 'Playfair Display', serif; font-weight: 700;">About Paris Desserts</h2>
+                    <p>Step into our charming dessert shop, where the aroma of warm sugar and fresh butter greets you the moment you enter. Designed to feel like a bright corner café tucked somewhere along a Parisian side street, our space invites you to slow down, savor, and indulge. Every treat is crafted in-house each morning, using classic techniques and ingredients sourced for their exceptional quality.</p>
+                    <p>Our first specialty category is <strong>Pâtisserie Classique</strong>, showcasing timeless French pastries such as flaky croissants, crisp palmiers, rich opera cake, and perfectly caramelized crème brûlée. For those who love delicate texture, the <strong>Viennoiseries</strong> selection offers cloud-soft brioche, chocolate-filled pain au chocolat, and buttery kouign-amann—each with just the right balance of sweetness. Finally, our <strong>Gâteaux & Petits Fours</strong> category celebrates artful, shareable delights like raspberry tartes, pistachio éclairs, lemon madeleines, and colorful macarons bursting with luxurious fillings.</p>
+                    <p>Whether you're stopping in for a single indulgence or picking up a box for a special occasion, every bite is meant to be memorable. Our chefs blend traditional French methods with a dash of playful creativity, offering desserts that are as beautiful as they are delicious. Pair your pastry with a handcrafted espresso or tea, and let our dessert shop become your new favorite escape for sweetness, comfort, and a little taste of Paris.</p>
+                </div>
+                <div style="height: 500px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.8), rgba(244, 231, 193, 0.8)), url('dessertimgs/dessert9.png'); background-size: cover; background-position: center; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2; text-align: center;">
+                        <h3 style="margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Artisan Pâtisserie</h3>
+                        <p style="font-size: 1.2rem; opacity: 0.9;">A Taste of Paris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Paris Desserts</h3>
+                    <p>Experience authentic French pâtisserie crafted daily with love and the finest ingredients. Every bite transports you to a Parisian café.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/parisdesserts/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/parisdesserts/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Menu Categories</h3>
+                    <ul>
+                        <li><a href="#services">Pâtisserie Classique</a></li>
+                        <li><a href="#services">Viennoiseries</a></li>
+                        <li><a href="#services">Gâteaux & Petits Fours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#home">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Visit Us</h3>
+                    <p>100 10th Street<br>San Francisco, CA</p>
+                    <p>Hours: Mon-Sat 7am-7pm<br>Sunday 8am-5pm</p>
+                    <p>Fresh pastries baked daily!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paris Desserts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2 style="text-align: center; margin-bottom: 30px;">Place Your Order</h2>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="bookingName">Full Name</label>
+                    <input type="text" id="bookingName" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookingEmail">Email</label>
+                    <input type="email" id="bookingEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookingPhone">Phone</label>
+                    <input type="tel" id="bookingPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookingService">Dessert Selection</label>
+                    <select id="bookingService" required>
+                        <option value="">Select a dessert</option>
+                        <option value="croissant">Croissant - $4.50</option>
+                        <option value="macaron">Macarons (Box of 6) - $6.50</option>
+                        <option value="painauchocolat">Pain au Chocolat - $5.00</option>
+                        <option value="eclair">Éclair - $5.50</option>
+                        <option value="tarte">Tarte au Citron - $6.00</option>
+                        <option value="madeleine">Madeleines (Box of 6) - $5.00</option>
+                        <option value="cremebrulee">Crème Brûlée - $6.50</option>
+                        <option value="opera">Opera Cake (Slice) - $7.00</option>
+                        <option value="palmier">Palmier - $3.50</option>
+                        <option value="kouignamann">Kouign-Amann - $5.50</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bookingDate">Pickup Date</label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookingTime">Pickup Time</label>
+                    <select id="bookingTime" required>
+                        <option value="">Select a time</option>
+                        <option value="07:00">7:00 AM</option>
+                        <option value="08:00">8:00 AM</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bookingNotes">Special Requests</label>
+                    <textarea id="bookingNotes" rows="3" placeholder="Quantity, special dietary notes, or gift wrapping requests..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 228, 232, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 228, 232, 0.95)';
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Booking modal functions
+        function openBookingModal() {
+            document.getElementById('bookingModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target == modal) {
+                closeBookingModal();
+            }
+        }
+
+        // Form submissions
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your order has been placed. We will contact you shortly to confirm pickup details.');
+            closeBookingModal();
+            this.reset();
+        });
+
+        // Set minimum date for booking to today
+        document.getElementById('bookingDate').min = new Date().toISOString().split('T')[0];
+
+
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                });
+            });
+        }
+
+        // Observe service cards for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
