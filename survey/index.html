@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="short cut icon" type="x-icon" href="save.png">
+    <link rel="stylesheet" href="Survey-page-main/style2.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Survey</title>
+    <style>
+        body {
+            background: #2B7A9B !important;
+        }
+        #logo img {
+            width: 70px;
+            height: 70px;
+        }
+        #question {
+            font-size: .7em !important;
+        }
+        #feedback {
+            display: inline-block !important;
+            float: none !important;
+            vertical-align: middle;
+        }
+        #button {
+            display: inline-block !important;
+            float: none !important;
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+        #button img {
+            width: 50px;
+            height: 50px;
+        }
+        #laptop {
+            background: url(splashpic1.jpg) no-repeat !important;
+            background-size: cover !important;
+            margin-top: 100px !important;
+        }
+        @media screen and (max-width: 910px) {
+            #laptop {
+                background: url(splashpic1.jpg) no-repeat !important;
+                background-size: cover !important;
+                margin-top: 20px !important;
+            }
+        }
+        @media screen and (max-width: 580px) {
+            #laptop {
+                margin-top: 20px !important;
+            }
+        }
+        #survey-section {
+            display: none;
+            background: #B8E8E0;
+            min-height: 100vh;
+        }
+        #survey-section header {
+            background: royalblue !important;
+            color: white !important;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #survey-section header h1,
+        #survey-section header p {
+            color: white !important;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page">
+        <div id="container">
+            <div id="logo">
+                <img src="dpadicon3.png"/>
+            </div> 
+            <div id="headline">
+                <div id="slogan">Small survey. <br /> Big impact. </div>
+                <div id="laptop"></div> 
+            </div> 
+            <div id="item_container">
+              </br>
+              </br>
+            </div> 
+            <div id="question_container">
+                <div id="question">Would be wonderful to know what you’d like to learn about A.I. Please take this  short 1 minute survey, so we can improve upcoming projects.</div>
+            </div> 
+            <div id="feedback_container">
+                <div id="feedback"> Start Survey </div> 
+                <div id="button"><a href="javascript:void(0);" onclick="startSurvey()"><img src="arrowright.png"/></a></div>
+            </div> 
+            <div id="footer_container">
+                <div id="footer">
+                    &copy; 2025 AIDelvePad. All rights reserved.
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <!-- Survey Section -->
+    <div id="survey-section">
+        <header>
+            <h1>Survey on AI Topics</h1>
+            <p>Brief Questions on Topics That Interest You</p>
+        </header>
+        <div class="Survey">
+        <form id="survey-form">
+        <div class="q1">
+            <h1>Do you want to know more about A.I. on your local desktop, instead of cloud-based?</h1>
+            <div class="field option1">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="Question 1" value="Yes" /> Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Question 1" value="No" /> No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="q2">
+            <h1>Would like more info on creating prompts?</h1>
+            <div class="field option2">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="Question 2" value="Yes" /> Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Question 2" value="No" /> No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="q3">
+            <h1>Do you want to know more about A.I. agents?</h1>
+            <div class="field option3">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="Question 3" value="Yes" /> Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Question 3"" value="No" /> No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="q4">
+            <h1>Are you interested in advanced methods like RAG to improve A.I. results?</h1>
+            <div class="field option4">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="Question 4"" value="Yes" /> Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Question 4" value="No" /> No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="q5">
+            <h1>Would you like comparison tutorials for choosing between different AI models?</h1>
+            <div class="field option5">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="Question 5" value="Yes" /> Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Question 5" value="No" /> No
+                    </label>
+                </div>
+            </div>
+            <button id="submit-button" class="submit-survey-btn" style="display:none;" type="submit">Submit Survey</button>
+            <div id="message" class="submission-message"></div>
+        </div>
+        </form>
+    </div>
+        <div class="end">
+            <h1>Thanks!</h1>
+            <div class="app-promo">
+                <p>Thank you for taking the survey! Want to learn more about A.I.? Try our free iOS tutorial app:</p>
+                <a href="https://apps.apple.com/us/app/a-i-delvepad/id6743481267" target="_blank" class="app-link">
+                    <span><strong>A.I. DelvePad</strong> - Delve into A.I. and LLM's</span>
+                    <img src="appstore1.svg" alt="App Store" class="appstore-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of survey-section -->
+
+    <script src="app.js"></script>
+    <script>
+        function startSurvey() {
+            document.getElementById('landing-page').style.display = 'none';
+            document.getElementById('survey-section').style.display = 'block';
+            document.body.style.background = '#B8E8E0';
+        }
+    </script>
+    <script>
+      const surveyForm = document.getElementById("survey-form");
+      const submitButton = document.getElementById("submit-button");
+      const messageDiv = document.getElementById("message");
+
+      surveyForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        messageDiv.textContent = "Submitting...";
+        messageDiv.style.display = "block";
+        messageDiv.style.backgroundColor = "beige";
+        messageDiv.style.color = "black";
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+
+        try {
+          // Create FormData from the form element
+          const formData = new FormData(this);
+          const formDataObj = {};
+          
+          // Convert FormData to object
+          for (let [key, value] of formData.entries()) {
+            formDataObj[key] = value;
+          }
+
+          // Submit form data
+          const scriptURL =
+            "https://script.google.com/macros/s/AKfycbwF7shm0GlaTC6sglqrfVn0vHI6fmpnYfpFLo72f2woA4UF6FbYurbR8ZqgfvLpOUzS/exec";
+
+          const response = await fetch(scriptURL, {
+            redirect: "follow",
+            method: "POST",
+            body: JSON.stringify(formDataObj),
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          });
+
+          const data = await response.json();
+
+          if (data.status === "success") {
+            messageDiv.textContent =
+              data.message || "Survey submitted successfully!";
+            messageDiv.style.backgroundColor = "#48c78e";
+            messageDiv.style.color = "white";
+            
+            // Wait 2 seconds then show thank you page
+            setTimeout(() => {
+              transitionToEnd();
+            }, 2000);
+          } else {
+            throw new Error(data.message || "Submission failed");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          messageDiv.textContent = "Error: " + error.message;
+          messageDiv.style.backgroundColor = "#f14668";
+          messageDiv.style.color = "white";
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit Survey";
+
+          setTimeout(() => {
+            messageDiv.textContent = "";
+            messageDiv.style.display = "none";
+          }, 4000);
+        }
+      });
+
+    </script>
+</body>
+
+</html>
