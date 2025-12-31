@@ -3,7 +3,6 @@
     "category": "Opensource Devs",
     "title": "Hub of Black developers in Opensource and App development",
     "items": [
-      [
       {
         "name": "Africa Access Water - Beta Website",
         "url": "https://github.com/Africa-Access-Water/afaw-beta-website",
@@ -402,11 +401,11 @@
         "description": "Monitors your WiFi network health in real-time and provides intelligent recommendations.",
         "developer": "temiye18",
         "developer_url": "https://github.com/temiye18"
-      }
-    ],
+    }
+    ]
+  },
   {
     "category": "Mobile Dev Apps",
-    "title": "Mobile Apps",
     "items": [
       {
         "name": "Boba Story",
@@ -452,8 +451,6 @@
         "name": "Plain Sight",
         "url": "https://apps.apple.com/us/app/plain-sight/id1462245484",
         "description": "A professional networking app that connects users based on shared interests and goals rather than résumés. It creates spaces for meaningful conversations and collaborations, especially for underrepresented groups."
-     }
-    ]
       }
     ]
   }
