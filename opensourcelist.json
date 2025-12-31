@@ -54,13 +54,6 @@
         "developer_url": "https://github.com/syntaxsdev"
       },
       {
-        "name": "Bob",
-        "url": "https://github.com/stephenafamo/bob",
-        "description": "SQL query builder and ORM/Factory generator for Go with support for PostgreSQL, MySQL and SQLite",
-        "developer": "stephenafamo",
-        "developer_url": "https://github.com/stephenafamo"
-      },
-      {
         "name": "bob",
         "url": "https://github.com/stephenafamo/bob",
         "description": "SQL query builder and ORM/Factory generator for Go with support for PostgreSQL, MySQL and SQLites.",
@@ -413,6 +406,7 @@
     ],
   {
     "category": "Mobile Dev Apps",
+    "title": "Mobile Apps",
     "items": [
       {
         "name": "Boba Story",
