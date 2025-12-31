@@ -4,18 +4,18 @@
     "title": "Hub of Black developers in Opensource and App development",
     "items": [
       {
-        "name": "Africa Access Water - Beta Website",
-        "url": "https://github.com/Africa-Access-Water/afaw-beta-website",
-        "description": "A React-based website for Africa Access Water (AFAW), empowering communities in Africa through solar-powered water infrastructure solutions.",
-        "developer": "6upe",
-        "developer_url": "https://github.com/6upe"
-      },
-      {
         "name": "Afam Flashcard Game",
         "url": "https://github.com/bware218/afam-history-flashcards",
         "description": "Interactive Flashcard Game for learning African American history.",
         "developer": "bware218",
         "developer_url": "https://github.com/bware218"
+      },
+      {
+        "name": "Africa Access Water - Beta Website",
+        "url": "https://github.com/Africa-Access-Water/afaw-beta-website",
+        "description": "A React-based website for Africa Access Water (AFAW), empowering communities in Africa through solar-powered water infrastructure solutions.",
+        "developer": "6upe",
+        "developer_url": "https://github.com/6upe"
       },
       {
         "name": "African American Heritage Trail: Cambridge",
@@ -65,13 +65,6 @@
         "description": "A modern C++ reimplementation of a POSIX-compatible interactive shell inspired by GNU Bash.",
         "developer": "brianjfox, original author of the GNU Bash shell",
         "developer_url": "https://github.com/brianjfox"
-      },
-      {
-        "name": "Browse Engine",
-        "url": "https://github.com/isocroft/browsengine",
-        "description": "Engine Detection Script for Browsers on Any Device.",
-        "developer": "isocroft",
-        "developer_url": "https://github.com/isocroft"
       },
       {
         "name": "Busser",
