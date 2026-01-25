@@ -924,7 +924,7 @@
     
     .bottom-content {
         flex-direction: column;
-        gap: 30px;
+        gap: 50px;
         padding: 0 20px;
     }
     
@@ -935,7 +935,7 @@
     }
     
     .bottom-right {
-        max-height: 250px; /* Reduced by 40% from 510px */
+        max-height: 350px; /* Increase by 40% from 250px */
     }
     
     .bottom-left h3,
