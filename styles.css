@@ -465,6 +465,18 @@
     border-bottom: 1px solid #c3e6cb;
 }
 
+.tool-name {
+    font-weight: bold;
+}
+
+.tool-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
   @media (max-width: 768px) {
 
     .grid-desktop {
@@ -918,7 +930,7 @@
 /* Mobile responsive for bottom section */
 @media (max-width: 768px) {
     .bottom-section {
-        min-height: 560px; /* 40% increase from 400px */
+        min-height: 700px; /* 40% increase from 400px */
         padding: 20px 0;
     }
     
@@ -934,8 +946,10 @@
         overflow-y: auto;
     }
     
+    .bottom-left,
     .bottom-right {
         max-height: 350px; /* Increase by 40% from 250px */
+        overflow-y: auto;
     }
     
     .bottom-left h3,
@@ -1085,5 +1099,17 @@
     .values-content p {
         font-size: 11px;
     }
+    
+    .tool-name {
+    font-weight: bold;
+}
+
+    .tool-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+    
 }
 

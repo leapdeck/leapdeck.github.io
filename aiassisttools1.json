@@ -1,0 +1,267 @@
+[
+ {
+    "site": "v0",
+    "link": "https://v0.dev/",
+    "article": "Ship quickly with user interface source code, clone existing interfaces, AI-powered customization."
+  },
+  {
+    "name": "Cursor",
+    "url": "https://cursor.com/",
+    "desc": "AI-first code editor that integrates models directly into your workflow for inline suggestions, refactoring, and debugging."
+  },
+  {
+    "name": "Bolt",
+    "url": "https://bolt.new/",
+    "desc": "AI-assisted app builder that turns prompts into full-stack applications with iteration, hosting, and code export options."
+  },
+  {
+    "name": "Claude (Anthropic)",
+    "url": "https://claude.ai/",
+    "desc": "AI assistant by Anthropic focused on helpfulness, safety, and constitutional AI for chat, writing, coding, and analysis."
+  },
+  {
+    "name": "Lovable",
+    "url": "https://lovable.dev",
+    "desc": "AI-powered app builder that helps generate, iterate, and deploy full-stack applications from natural language descriptions."
+  },
+  {
+    "name": "Firebase Studio",
+    "url": "https://firebase.studio",
+    "desc": "Tooling around Firebase that streamlines building, managing, and deploying backend services for web and mobile apps."
+  },
+  {
+    "name": "Cline",
+    "url": "https://cline.bot/",
+    "desc": "AI coding agent designed to work alongside developers, handling tasks like editing, debugging, and running code autonomously."
+  },
+  {
+    "name": "Aider",
+    "url": "https://aider.chat/",
+    "desc": "Command-line AI pair programmer that edits your existing codebase via git-aware chats in your terminal environment."
+  },
+  {
+    "name": "Trae",
+    "url": "https://www.trae.ai/",
+    "desc": "AI platform focused on building and orchestrating autonomous agents for business workflows, data tasks, and operations."
+  },
+  {
+    "name": "Kiro",
+    "url": "https://kiro.dev",
+    "desc": "Developer assistant that integrates AI into your coding workflow, helping with generation, refactoring, and understanding codebases."
+  },
+  {
+    "name": "Vercel",
+    "url": "https://vercel.com/",
+    "desc": "Frontend cloud platform for developing, previewing, and shipping web applications with integrated serverless and edge functions."
+  },
+  {
+    "name": "Baset44",
+    "url": "https://base44.com/",
+    "desc": "Platform providing AI-driven tools and infrastructure to accelerate software development and product experimentation."
+  },
+  {
+    "name": "Windsurf",
+    "url": "https://windsurf.com/",
+    "desc": "AI-powered coding environment aimed at helping developers build, refactor, and ship software faster with intelligent assistance."
+  },
+  {
+    "name": "Codex",
+    "url": "https://openai.com/codex/",
+    "desc": "Code-focused AI model from OpenAI that translates natural language instructions into working code in many programming languages."
+  },
+  {
+    "name": "Replit",
+    "url": "https://replit.com",
+    "desc": "Online IDE and hosting platform with collaborative coding, instant deployments, and built-in AI tools for developers."
+  },
+  {
+    "name": "AWS App Studio",
+    "url": "https://aws.amazon.com/appstudio",
+    "desc": "Amazon service that lets users build applications quickly using AI assistance and AWS-managed infrastructure components."
+  },
+  {
+    "name": "ChatGPT (OpenAI)",
+    "url": "https://chat.openai.com/",
+    "desc": "Conversational AI by OpenAI for answering questions, writing, coding help, creative work, and task automation through chat."
+  },
+  {
+    "name": "Gemini (Google)",
+    "url": "https://gemini.google.com/",
+    "desc": "Google’s multimodal AI assistant integrating search, coding, and productivity features across web and mobile experiences."
+  },
+  {
+    "name": "Perplexity AI",
+    "url": "https://www.perplexity.ai/",
+    "desc": "Answer engine combining web search and AI to deliver concise, cited responses and follow-up exploration in a chat interface."
+  },
+  {
+    "name": "Microsoft Copilot",
+    "url": "https://copilot.microsoft.com/",
+    "desc": "AI assistant integrated with Microsoft services to help with search, content creation, work documents, and productivity tasks."
+  },
+  {
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "desc": "AI coding assistant in editors like VS Code that suggests code, tests, and documentation directly from your context."
+  },
+  {
+    "name": "Zapier AI / Chatbots",
+    "url": "https://zapier.com/ai",
+    "desc": "Tools for building AI chatbots and automations that connect large language models with thousands of business apps and workflows."
+  },
+  {
+    "name": "ElevenLabs (voice)",
+    "url": "https://elevenlabs.io/",
+    "desc": "AI voice platform offering lifelike text-to-speech, voice cloning, dubbing, and audio tools for creators and developers."
+  },
+  {
+    "name": "AskCodi",
+    "url": "https://www.askcodi.com/",
+    "desc": "AI assistant for developers offering code completion, documentation help, test generation, and language support inside editors."
+  },
+  {
+    "name": "Amazon Q Developer",
+    "url": "https://aws.amazon.com/q/developer/",
+    "desc": "AWS generative AI assistant that helps developers understand code, generate changes, and interact with AWS resources."
+  },
+  {
+    "name": "Tabnine",
+    "url": "https://www.tabnine.com/",
+    "desc": "AI code completion tool that runs locally or in cloud, offering privacy-focused suggestions trained on open-source code."
+  },
+  {
+    "name": "OpenHands",
+    "url": "https://docs.openhands.dev/overview/introduction",
+    "desc": "Open-source AI software engineering agent that autonomously edits repositories, runs tools, and executes development tasks."
+  },
+  {
+    "name": "Rork",
+    "url": "https://rork.com/",
+    "desc": "Platform centered on AI-powered coding and collaboration, helping teams prototype, review, and ship software faster."
+  },
+  {
+    "name": "Void Editor",
+    "url": "https://voideditor.com/",
+    "desc": "Modern code editor enhanced with AI features for smarter navigation, suggestions, and project-wide code understanding."
+  },
+  {
+    "name": "AmpCode",
+    "url": "https://ampcode.com/",
+    "desc": "AI development environment that helps generate, refactor, and maintain applications with conversational guidance."
+  },
+  {
+    "name": "ZedDev",
+    "url": "https://zed.dev/",
+    "desc": "High-performance, multiplayer code editor with AI-assisted development features and low-latency collaboration for teams."
+  },
+  {
+    "name": "Qodo",
+    "url": "https://www.qodo.ai/",
+    "desc": "AI coding and app-building platform that lets users describe features and generate production-ready codebases quickly."
+  },
+  {
+    "name": "Junie",
+    "url": "https://www.jetbrains.com/junie/",
+    "desc": "JetBrains AI assistant integrated with IDEs to help with code generation, navigation, explanations, and refactoring."
+  },
+  {
+    "name": "AugmentCode",
+    "url": "https://www.augmentcode.com/",
+    "desc": "AI tool focused on augmenting developer productivity with code suggestions, explanations, and repository-level understanding."
+  },
+  {
+    "name": "KiloCode",
+    "url": "https://kilo.ai/",
+    "desc": "AI coding assistant and automation platform built to help teams generate, analyze, and maintain complex software systems."
+  },
+  {
+    "name": "Gitar",
+    "url": "https://gitar.ai/",
+    "desc": "AI assistant for software projects that understands repositories, suggests changes, and supports collaborative coding workflows."
+  },
+  {
+    "name": "Mistral AI",
+    "url": "https://mistral.ai/",
+    "desc": "Company developing open and commercial large language models for chat, coding, and enterprise AI applications."
+  },
+  {
+    "name": "Warp Dev",
+    "url": "https://www.warp.dev/",
+    "desc": "Modern terminal with AI features, structured commands, and collaboration tools to improve developer productivity."
+  },
+  {
+    "name": "Smyth OS",
+    "url": "https://smythos.com/",
+    "desc": "Platform for building, orchestrating, and deploying AI agents that connect to tools, data sources, and enterprise workflows."
+  },
+  {
+    "name": "Xano",
+    "url": "https://www.xano.com/",
+    "desc": "No-code backend platform providing APIs, database, and business logic for applications without managing servers."
+  },
+  {
+    "name": "Google Antigraviity",
+    "url": "https://antigravity.google/",
+    "desc": "Google experimental experience featuring playful, physics-bending interactions to showcase creative web technologies."
+  },
+  {
+    "name": "Daytona",
+    "url": "https://www.daytona.io/",
+    "desc": "Developer platform offering reproducible cloud development environments to standardize and accelerate onboarding."
+  },
+  {
+    "name": "Bubble IO",
+    "url": "https://bubble.io/",
+    "desc": "No-code visual web app builder for designing, hosting, and scaling full-featured applications without traditional programming."
+  },
+  {
+    "name": "PromptHub",
+    "url": "https://www.prompthub.us/",
+    "desc": "Tooling for organizing, testing, and collaborating on prompts and AI workflows across teams and projects."
+  },
+  {
+    "name": "Stainless",
+    "url": "https://www.stainless.com/",
+    "desc": "Platform that helps companies generate robust SDKs and client libraries from APIs with strong type safety."
+  },
+  {
+    "name": "Codiga",
+    "url": "https://www.codiga.io/",
+    "desc": "Code analysis and review tool that checks style, security, and quality issues with automated insights for developers."
+  },
+  {
+    "name": "CodeRabbit",
+    "url": "https://www.coderabbit.ai/",
+    "desc": "AI-powered code review assistant that comments on pull requests, suggesting improvements and catching potential issues."
+  },
+  {
+    "name": "Supabase",
+    "url": "https://supabase.com/",
+    "desc": "Open-source Firebase alternative offering Postgres database, authentication, storage, and edge functions for apps."
+  },
+  {
+    "name": "Pocketbase",
+    "url": "https://pocketbase.io/",
+    "desc": "Lightweight open-source backend in a single binary with database, auth, and realtime subscriptions."
+  },
+  {
+    "name": "Railway",
+    "url": "https://railway.com/",
+    "desc": "Cloud platform for deploying applications and databases with simple workflows, environments, and observability."
+  },
+  {
+    "name": "Pear AI",
+    "url": "https://www.trypear.ai/",
+    "desc": "AI coding pair that integrates into development workflows, helping write, refactor, and understand complex codebases."
+  },
+  {
+    "name": "Theia",
+    "url": "https://theia-ide.org/",
+    "desc": "Extensible, open-source cloud and desktop IDE framework used to build customized development environments."
+  },
+  {
+    "name": "Traycer",
+    "url": "https://traycer.ai/",
+    "desc": "AI-powered debugger and runtime analysis tool to trace, inspect, and understand program behavior more easily."
+  }
+]

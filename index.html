@@ -625,22 +625,22 @@
     <!-- Bottom Section -->
     <div class="bottom-section">
         <div class="bottom-content">
-            
-                        
             <div class="bottom-right">
                 <h3>Opensource and Mobile Apps from Black Devs</h3>
                 <div id="bottom-sites-list">
                     <!-- Sites will be loaded here by JavaScript -->
                 </div>
-            </div>
-                        
-            <div class="bottom-left">
                 <h3>Latest Tech News</h3>
                 <div id="bottom-articles-list">
                     <!-- Articles will be loaded here by JavaScript -->
                 </div>
             </div>
-
+            <div class="bottom-left">
+                <h3>Coding Assistant and AI Tools</h3>
+                <div id="bottom-atools-list">
+                    <!-- Tools will be loaded here by JavaScript -->
+                </div>
+            </div>
         </div>
     </div>
 
@@ -748,6 +748,49 @@
             .catch(error => {
                 console.error('Error loading sites:', error);
             });
+
+    
+// Load coding assistant tools apps for bottom section
+
+fetch('aiassisttools1.json')
+    .then(response => response.json())
+    .then(data => {
+        const atoolsList = document.getElementById('bottom-atools-list');
+        
+        data.forEach(tool => {
+            const toolEntry = document.createElement('div');
+            toolEntry.className = 'tool-entry';
+            
+            const nameLink = document.createElement('a');
+            nameLink.className = 'tool-name';
+            nameLink.href = tool.url;
+            nameLink.target = '_blank';
+            nameLink.textContent = tool.name;
+            nameLink.style.fontSize = '16px';
+            nameLink.style.color = 'rgba(255, 255, 255, 1.5)';
+            
+            const descriptionSpan = document.createElement('p');
+            descriptionSpan.className = 'tool-description';
+            descriptionSpan.textContent = tool.desc;
+
+            const line = document.createElement('p');
+            line.style.width = '100%';
+            line.style.height = '1px';
+            line.style.backgroundColor = 'rgba(255, 255, 255, .5)';
+            
+            toolEntry.appendChild(nameLink);
+            toolEntry.appendChild(descriptionSpan);
+            toolEntry.appendChild(line);
+            atoolsList.appendChild(toolEntry);
+
+            
+        });
+    })
+    .catch(error => {
+        console.error('Error loading tools:', error);
+        const atoolsList = document.getElementById('bottom-atools-list');
+        atoolsList.innerHTML = '<p>Unable to load tools at this time.</p>';
+    });
     </script>
 
     <!-- Footer Section -->
