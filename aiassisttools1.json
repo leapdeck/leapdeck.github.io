@@ -1,8 +1,8 @@
 [
  {
-    "site": "v0",
-    "link": "https://v0.dev/",
-    "article": "Ship quickly with user interface source code, clone existing interfaces, AI-powered customization."
+    "name": "v0",
+    "url": "https://v0.dev/",
+    "desc": "Ship quickly with user interface source code, clone existing interfaces, AI-powered customization."
   },
   {
     "name": "Cursor",
