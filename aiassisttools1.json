@@ -17,7 +17,7 @@
   {
     "name": "Claude (Anthropic)",
     "url": "https://claude.ai/",
-    "desc": "AI assistant by Anthropic focused on helpfulness, safety, and constitutional AI for chat, writing, coding, and analysis."
+    "desc": "Coding assistant with natural-language code generation, deep project understanding, multi-language support, IDE/terminal integration, debugging, refactoring, Git workflows."
   },
   {
     "name": "Lovable",
@@ -33,6 +33,11 @@
     "name": "Cline",
     "url": "https://cline.bot/",
     "desc": "AI coding agent designed to work alongside developers, handling tasks like editing, debugging, and running code autonomously."
+  },
+  {
+    "name": "OpenCode AI",
+    "url": "https://opencode.ai",
+    "desc": "Open-source, AI coding agent with terminal/IDE integration, LSP support, multi-session agents, and support for 75+ LLMs."
   },
   {
     "name": "Aider",
