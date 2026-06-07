@@ -401,49 +401,109 @@
     "category": "Mobile Dev Apps",
     "items": [
       {
-        "name": "Boba Story",
-        "url": "https://apps.apple.com/us/app/boba-story/id1563575361",
-        "description": "Design your own boba drinks and serve them! Joji, a strawberry forest spirit, shows up and needs your help to restore their old shop."
-          },
-      {
-        "name": "Goalsetter: Invest & Bank",
-        "url": "https://apps.apple.com/us/app/goalsetter-invest-bank/id1440624866",
-        "description": "A financial literacy and savings app designed for families, with a special focus on empowering the next generation of savers and investors. It offers banking, goal-setting, and culturally relevant financial education for youth."
+      "name": "Airfordable",
+      "url": "https://apps.apple.com/us/app/airfordable/id1554098722",
+      "description": "A flexible travel booking platform that allows users to lock in flight prices with a small deposit and pay the rest over time. It makes global travel accessible via custom, budget-friendly bi-weekly payments."
       },
       {
-        "name": "QuikMaths",
-        "url": "https://apps.apple.com/us/app/quikmaths-im-edition/id1500526032",
-        "description": "QuikMaths is proof that math can be fun, offering quick, engaging math games designed to sharpen mental arithmetic skills."
+      "name": "Beanstack tracker",
+      "url": "https://apps.apple.com/us/app/beanstack-tracker/id1360324277",
+      "description": "A dynamic reading tracking app designed for schools, libraries, and families to encourage life-long literacy habits. It gamifies reading by allowing users to log books, earn digital badges, and join local challenges."
       },
       {
-        "name": "Black Coloring Book・Color Noir",
-        "url": "https://apps.apple.com/us/app/black-coloring-book-color-noir/id1213786913",
-        "description": "A digital coloring book designed to celebrate Black beauty, culture, and heritage through empowering artwork. The app offers a calming, creative outlet with vibrant, culturally inspired illustrations."
+      "name": "Black Coloring Book・Color Noir",
+      "url": "https://apps.apple.com/us/app/black-coloring-book-color-noir/id1213786913",
+      "description": "A digital coloring book designed to celebrate Black beauty, culture, and heritage through empowering artwork. The app offers a calming, creative outlet with vibrant, culturally inspired illustrations."
       },
       {
-        "name": "Focus Friend App",
-        "url": "https://apps.apple.com/us/app/focus-friend-by-hank-green/id6742278016",
-        "description": "A cozy focus timer. When you Focus, your Bean Friend will Focus. Let your Bean complete their work and get prizes to buy decorations! For anyone who struggles with long sessions of concentration."
+      "name": "Black History Quotes Express",
+      "url": "https://apps.apple.com/us/app/black-history-quotes-express/id1452267753",
+      "description": "An educational daily inspiration app that delivers powerful and uplifting quotes from iconic Black historical figures. It features curated daily wisdom, extensive search options, and easy sharing tools to spread knowledge."
       },
       {
-        "name": "Spill",
-        "url": "https://www.spill.com/",
-        "description": "A text and image based social media app made by Black developers previously from Twitter, takes the inclusive and enriching Black community experience and amplifies it."
+      "name": "BLeBRiTY",
+      "url": "https://apps.apple.com/us/app/blebrity/id1252073947",
+      "description": "A charades-style mobile game that celebrates Black culture through hilarious, culturally relevant categories. It's perfect for parties and game nights, offering a fun and engaging way to connect with friends and family."
       },
       {
-        "name": "Fanbase",
-        "url": "https://www.fanbase.app",
-        "description": "The subscription-based social platform empowers creators to monetize their content and creative talents. Hayes III created Fanbase to help bridge the equity gap in social media and help Black users create wealth."
+      "name": "Boba Story",
+      "url": "https://apps.apple.com/us/app/boba-story/id1563575361",
+      "description": "Design your own boba drinks and serve them! Joji, a strawberry forest spirit, shows up and needs your help to restore their old shop."
       },
       {
-        "name": "BLeBRiTY",
-        "url": "https://apps.apple.com/us/app/blebrity/id1252073947",
-        "description": "A charades-style mobile game that celebrates Black culture through hilarious, culturally relevant categories. It's perfect for parties and game nights, offering a fun and engaging way to connect with friends and family."
+      "name": "Boddle Learning",
+      "url": "https://apps.apple.com/us/app/boddle/id1520367760",
+      "description": "An interactive, gamified math and learning platform that transforms elementary education into an immersive 3D gaming experience. It keeps students engaged while providing real-time data tracking for educators."
       },
       {
-        "name": "Plain Sight",
-        "url": "https://apps.apple.com/us/app/plain-sight/id1462245484",
-        "description": "A professional networking app that connects users based on shared interests and goals rather than résumés. It creates spaces for meaningful conversations and collaborations, especially for underrepresented groups."
+      "name": "Calendly",
+      "url": "https://apps.apple.com/us/app/calendly-mobile/id1451094657",
+      "description": "An automated scheduling platform designed to streamline the way you book meetings, interviews, and appointments. It eliminates painful back-and-forth emails by syncing seamlessly with your existing calendars."
+      },
+      {
+      "name": "Fanbase",
+      "url": "https://www.fanbase.app",
+      "description": "The subscription-based social platform empowers creators to monetize their content and creative talents. Hayes III created Fanbase to help bridge the equity gap in social media and help Black users create wealth."
+      },
+      {
+      "name": "Focus Friend App",
+      "url": "https://apps.apple.com/us/app/focus-friend-by-hank-green/id6742278016",
+      "description": "A cozy focus timer. When you Focus, your Bean Friend will Focus. Let your Bean complete their work and get prizes to buy decorations! For anyone who struggles with long sessions of concentration."
+      },
+      {
+      "name": "Goalsetter: Invest & Bank",
+      "url": "https://apps.apple.com/us/app/goalsetter-invest-bank/id1440624866",
+      "description": "A financial literacy and savings app designed for families, with a special focus on empowering the next generation of savers and investors. It offers banking, goal-setting, and culturally relevant financial education for youth."
+      },
+      {
+      "name": "Knowledge of Self Trivia",
+      "url": "https://apps.apple.com/in/app/knowledge-of-self-trivia/id6664058405",
+      "description": "An engaging educational trivia application dedicated to exploring and celebrating global Black history, heritage, and culture. It tests and expands players' knowledge through interactive quizzes."
+      },
+      {
+      "name": "Outdoor Afro",
+      "url": "https://apps.apple.com/us/app/outdoor-afro/id6743444433",
+      "description": "A community-focused application that inspires and connects Black leadership and participation in nature. It helps users discover outdoor adventures, find local meetups, and cultivate a deeper bond with wildlife."
+      },
+      {
+      "name": "Plain Sight",
+      "url": "https://apps.apple.com/us/app/plain-sight/id1462245484",
+      "description": "A professional networking app that connects users based on shared interests and goals rather than résumés. It creates spaces for meaningful conversations and collaborations, especially for underrepresented groups."
+      },
+      {
+      "name": "QuikMaths",
+      "url": "https://apps.apple.com/us/app/quikmaths-im-edition/id1500526032",
+      "description": "QuikMaths is proof that math can be fun, offering quick, engaging math games designed to sharpen mental arithmetic skills."
+      },
+      {
+      "name": "Roam.Blk",
+      "url": "https://apps.apple.com/us/app/thelitwork/id6747786343",
+      "description": "A travel and lifestyle networking application built to connect Black travelers and digital nomads across the globe. It offers location-based meetups, community discussion hubs, and localized safety insights."
+      },
+      {
+      "name": "SoLo Funds",
+      "url": "https://apps.apple.com/us/app/solo-funds-lend-borrow/id1270164837",
+      "description": "A peer-to-peer mobile lending marketplace built to provide affordable capital to individuals facing short-term financial hurdles. It enables community-driven borrowing and lending on mutually beneficial terms."
+      },
+      {
+      "name": "Spill",
+      "url": "https://www.spill.com/",
+      "description": "A text and image based social media app made by Black developers previously from Twitter, takes the inclusive and enriching Black community experience and amplifies it."
+      },
+      {
+      "name": "Sworkit",
+      "url": "https://apps.apple.com/us/app/sworkit-fitness-wellness-app/id527219710",
+      "description": "A highly customizable fitness and workout app tailored for busy individuals who want to exercise anytime, anywhere. It features comprehensive video guides, custom training routines, and structured plans."
+      },
+      {
+      "name": "Uplift TV",
+      "url": "https://apps.apple.com/us/app/uplift-tv-network/id6747027699",
+      "description": "A faith-based streaming network delivering a wide range of positive, family-friendly content including inspirational movies, series, and live ministries. It provides viewers with safe, uplifting entertainment."
+      },
+      {
+      "name": "Zema Music",
+      "url": "https://apps.apple.com/us/app/zema-music/id1405884045",
+      "description": "A dedicated digital audio platform specializing in streaming traditional and modern Ethiopian gospel and spiritual music. It offers users personalized playlists, high-fidelity sound, and easy offline downloads."
       }
     ]
   }
