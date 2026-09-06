@@ -1,4 +1,4 @@
-/* Coding tools — plain JavaScript data for app.js */
+/* Coding tools — plain JavaScript data for the wheel */
 window.CODING_TOOLS = [
   {
     name: "Aider",
@@ -69,5 +69,40 @@ window.CODING_TOOLS = [
     name: "Bolt",
     url: "https://bolt.new/",
     description: "Prompt-to-app builder for shipping full-stack projects in the browser."
+  },
+  {
+    name: "Lovable",
+    url: "https://lovable.dev",
+    description: "Turn ideas into apps with AI-powered, full-stack app generation."
+  },
+  {
+    name: "Firebase Studio",
+    url: "https://firebase.studio",
+    description: "Build backends, front ends, and mobile apps faster with AI agents."
+  },
+  {
+    name: "Cline",
+    url: "https://cline.bot/",
+    description: "Open-source collaborative AI coding partner that is fully extensible."
+  },
+  {
+    name: "AWS App Studio",
+    url: "https://aws.amazon.com/appstudio",
+    description: "Generative-AI low-code platform for secure enterprise-grade app creation."
+  },
+  {
+    name: "AskCodi",
+    url: "https://www.askcodi.com/",
+    description: "AI coding assistant for writing, explaining, and improving code."
+  },
+  {
+    name: "Amazon Q Developer",
+    url: "https://aws.amazon.com/q/developer/",
+    description: "AWS AI assistant for building, troubleshooting, and transforming applications."
+  },
+  {
+    name: "Tabnine",
+    url: "https://www.tabnine.com/",
+    description: "AI code completion assistant that helps teams write code faster."
   }
 ];
