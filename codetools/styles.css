@@ -3,6 +3,8 @@
   --mint: #7dcf9a;
   --red: #e31c23;
   --green-deep: #134628;
+  --peach: #ffd7b0;
+  --peach-deep: #efb888;
 }
 
 * {
@@ -81,18 +83,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(12px, 3vw, 28px);
-  width: 100%;
+  gap: clamp(10px, 2.5vw, 20px);
+  width: auto;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse 80% 70% at 40% 35%, #ffe7c8 0%, transparent 60%),
+    linear-gradient(165deg, var(--peach) 0%, #f5c49a 45%, var(--peach-deep) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 14px 36px rgba(0, 0, 0, 0.28);
 }
 
 .wheel-panel {
   position: relative;
-  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.35));
 }
 
 #wheelCanvas {
   display: block;
-  width: min(58vw, 360px);
+  /* 40% narrower than previous min(58vw, 360px) */
+  width: min(34.8vw, 216px);
   height: auto;
   max-height: 72vh;
   touch-action: none;
@@ -108,7 +119,7 @@ body {
 .pointer-stack {
   display: flex;
   align-items: center;
-  gap: clamp(10px, 2.5vw, 18px);
+  gap: clamp(8px, 2vw, 14px);
   flex-shrink: 0;
 }
 
@@ -140,19 +151,20 @@ body {
   isolation: isolate;
   border: none;
   cursor: pointer;
-  padding: 16px 22px;
+  /* ~40% smaller than previous 16px 22px / 0.98rem / 170px */
+  padding: 10px 13px;
   border-radius: 999px;
   background: linear-gradient(180deg, #2f7a4a 0%, var(--green-deep) 100%);
   color: #f7fff9;
   font-family: "Outfit", sans-serif;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 0.59rem;
   letter-spacing: 0.02em;
   box-shadow:
     0 0 0 1px rgba(125, 207, 154, 0.45),
-    0 8px 24px rgba(0, 0, 0, 0.35);
+    0 5px 14px rgba(0, 0, 0, 0.35);
   transition: transform 0.15s ease, opacity 0.2s ease;
-  max-width: 170px;
+  max-width: 102px;
   line-height: 1.25;
 }
 
@@ -231,11 +243,13 @@ body {
 @media (max-width: 700px) {
   .wheel-scene {
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
+    padding: 18px 16px;
   }
 
   #wheelCanvas {
-    width: min(78vw, 320px);
+    /* 40% narrower than previous min(78vw, 320px) */
+    width: min(46.8vw, 192px);
   }
 
   .pointer-stack {
@@ -245,7 +259,7 @@ body {
 
   .open-btn {
     max-width: none;
-    min-width: 180px;
+    min-width: 108px;
   }
 }
 
