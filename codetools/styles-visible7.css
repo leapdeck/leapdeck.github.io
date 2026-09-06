@@ -1,0 +1,282 @@
+:root {
+  --cream: #f4efe4;
+  --mint: #7dcf9a;
+  --red: #e31c23;
+  --green-deep: #134628;
+  --peach: #ffd7b0;
+  --peach-deep: #efb888;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Outfit", system-ui, sans-serif;
+  color: var(--cream);
+  background:
+    radial-gradient(ellipse 70% 55% at 25% 35%, rgba(125, 207, 154, 0.12), transparent 55%),
+    radial-gradient(ellipse 60% 45% at 85% 70%, rgba(227, 28, 35, 0.1), transparent 50%),
+    linear-gradient(160deg, #07090d 0%, #121820 45%, #0b1016 100%);
+  overflow-x: hidden;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 100px cushion from the bottom edge of the page */
+  padding: 20px 16px 100px;
+}
+
+.brand-bar {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 18px;
+}
+
+.brand-name {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.4rem, 8vw, 3.4rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  background: linear-gradient(180deg, #fff 10%, var(--mint) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  margin: 6px 0 0;
+  opacity: 0.72;
+  font-size: 0.95rem;
+}
+
+.stage {
+  width: min(960px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  /* Push the wheel toward the bottom of the page */
+  margin-top: auto;
+}
+
+.wheel-scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 2.5vw, 20px);
+  width: auto;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse 80% 70% at 40% 35%, #ffe7c8 0%, transparent 60%),
+    linear-gradient(165deg, var(--peach) 0%, #f5c49a 45%, var(--peach-deep) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 14px 36px rgba(0, 0, 0, 0.28);
+}
+
+.wheel-panel {
+  position: relative;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.35));
+}
+
+#wheelCanvas {
+  display: block;
+  /* 40% narrower than previous min(58vw, 360px) */
+  width: min(34.8vw, 216px);
+  /* Tall enough to show 11 tool names (prior 5-slot height * 11/5) */
+  height: calc(min(34.8vw, 216px) * 1.125 * 1.9 * 7 / 5);
+  max-height: none;
+  touch-action: none;
+  cursor: grab;
+  border-radius: 18px;
+  user-select: none;
+}
+
+#wheelCanvas:active {
+  cursor: grabbing;
+}
+
+.pointer-stack {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 2vw, 14px);
+  flex-shrink: 0;
+}
+
+.clicker {
+  width: 14px;
+  height: 28px;
+  background: linear-gradient(180deg, #f2f5f8, #8b949e);
+  border-radius: 3px;
+  transform-origin: right center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.08s ease-out;
+}
+
+.clicker.tick {
+  transform: rotate(-18deg);
+}
+
+.pointer-arrow {
+  width: 0;
+  height: 0;
+  /* 70% smaller than previous 22px / 38px */
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 11px solid var(--red);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+}
+
+.open-btn {
+  position: relative;
+  isolation: isolate;
+  border: none;
+  cursor: pointer;
+  /* ~40% smaller than previous 16px 22px / 0.98rem / 170px */
+  padding: 10px 13px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #2f7a4a 0%, var(--green-deep) 100%);
+  color: #f7fff9;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 0.59rem;
+  letter-spacing: 0.02em;
+  box-shadow:
+    0 0 0 1px rgba(125, 207, 154, 0.45),
+    0 5px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, opacity 0.2s ease;
+  max-width: 102px;
+  line-height: 1.25;
+}
+
+.open-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.open-btn:not(:disabled):hover {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.open-btn:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+.open-btn-glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(125, 207, 154, 0.55), transparent 68%);
+  z-index: -1;
+  animation: softPulse 2.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.open-btn:disabled .open-btn-glow {
+  animation: none;
+  opacity: 0.2;
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.96);
+    filter: blur(2px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+    filter: blur(6px);
+  }
+}
+
+.hint,
+.selected-meta {
+  margin: 0;
+  text-align: center;
+}
+
+.hint {
+  font-size: 0.92rem;
+  opacity: 0.65;
+}
+
+.selected-meta {
+  max-width: 420px;
+  font-size: 0.95rem;
+  color: rgba(244, 239, 228, 0.88);
+  min-height: 1.4em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .wheel-scene {
+    /* Keep button to the right of the wheel on mobile */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 12px;
+    width: min(100%, 420px);
+  }
+
+  #wheelCanvas {
+    /* 40% narrower; tall enough for 11 visible tool names */
+    width: min(42vw, 168px);
+    height: calc(min(42vw, 168px) * 1.125 * 1.9 * 7 / 5);
+    flex-shrink: 0;
+  }
+
+  .pointer-stack {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    gap: 8px;
+  }
+
+  .open-btn {
+    max-width: 96px;
+    min-width: 0;
+    padding: 9px 11px;
+    font-size: 0.55rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .open-btn-glow {
+    animation: none;
+    opacity: 0.7;
+  }
+
+  .clicker {
+    transition: none;
+  }
+}
