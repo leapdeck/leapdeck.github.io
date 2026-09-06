@@ -20,8 +20,8 @@
     { fill: ["#fffdf8", "#e8dfcf", "#cfc3ae"], text: "#1a1a1a" },
     { fill: ["#3d8f58", "#1f5132", "#143824"], text: "#f0d56a" }
   ];
-  const VISIBLE = 11;
-  const CENTER_PAD = Math.floor(VISIBLE / 2); // 5
+  const VISIBLE = 5;
+  const CENTER_PAD = Math.floor(VISIBLE / 2); // 2
   const TOP_INSET = 8;
 
   const state = {

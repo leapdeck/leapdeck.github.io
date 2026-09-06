@@ -107,9 +107,9 @@ body {
   display: block;
   /* 40% narrower than previous min(58vw, 360px) */
   width: min(34.8vw, 216px);
-  /* Height increased 90% from prior aspect (720/640) */
-  height: calc(min(34.8vw, 216px) * 1.125 * 1.9);
-  max-height: calc(72vh * 1.9);
+  /* Tall enough to show 11 tool names (prior 5-slot height * 11/5) */
+  height: calc(min(34.8vw, 216px) * 1.125 * 1.9 * 11 / 5);
+  max-height: none;
   touch-action: none;
   cursor: grab;
   border-radius: 18px;
