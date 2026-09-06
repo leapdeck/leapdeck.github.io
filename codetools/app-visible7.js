@@ -228,13 +228,22 @@
     }
   }
 
+  function displayUrl(url) {
+    if (!url) return "";
+    return String(url)
+      .replace(/^https?:\/\//i, "")
+      .replace(/^www\./i, "");
+  }
+
   function syncSelection(silent) {
     const index = currentIndex();
     const tool = toolAt(index);
     if (!tool) return;
 
     state.selectedIndex = index;
-    selectedMeta.textContent = tool.description || "";
+    const urlLine = displayUrl(tool.url);
+    const descLine = tool.description || "";
+    selectedMeta.textContent = [urlLine, descLine].filter(Boolean).join("\n");
     if (liveSelected) liveSelected.textContent = `Selected ${tool.name}`;
     openBtn.disabled = !tool.url;
     openBtn.dataset.url = tool.url || "";

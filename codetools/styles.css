@@ -219,7 +219,9 @@ body {
   max-width: 420px;
   font-size: 0.95rem;
   color: rgba(244, 239, 228, 0.88);
-  min-height: 1.4em;
+  min-height: 2.8em;
+  white-space: pre-line;
+  line-height: 1.45;
 }
 
 .sr-only {
