@@ -5,7 +5,6 @@
   const selectedMeta = document.getElementById("selectedMeta");
   const liveSelected = document.getElementById("liveSelected");
   const clicker = document.getElementById("clicker");
-  const hint = document.getElementById("hint");
 
   if (!canvas || !openBtn || !selectedMeta) {
     console.error("codetools: missing required DOM nodes");
@@ -316,7 +315,6 @@
     state.lastY = e.clientY;
     state.lastT = performance.now();
     canvas.setPointerCapture?.(e.pointerId);
-    if (hint) hint.style.opacity = "0.35";
     startLoop();
   }
 
@@ -376,7 +374,7 @@
   window.addEventListener("resize", resize);
 
   if (!tools.length) {
-    if (hint) hint.textContent = "Unable to load coding tools.";
+    selectedMeta.textContent = "Unable to load coding tools.";
     return;
   }
 
@@ -384,5 +382,4 @@
   state.offset = snapOffsetForIndex(0);
   draw();
   syncSelection(true);
-  if (hint) hint.textContent = "Swipe or drag the wheel up or down";
 })();
