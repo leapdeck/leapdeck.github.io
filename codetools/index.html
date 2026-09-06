@@ -21,28 +21,10 @@
     </header>
 
     <main class="stage">
-      <div class="wheel-scene" aria-label="Coding tools spinning wheel">
-        <div class="wheel-frame">
-          <div class="wheel-rim left-rim" aria-hidden="true"></div>
-
-          <div class="wheel-viewport" id="wheelViewport">
-            <div class="wheel-drum" id="wheelDrum" role="listbox" aria-label="Coding tools" aria-activedescendant="">
-              <!-- Slots rendered by app.js -->
-            </div>
-            <div class="center-band" aria-hidden="true"></div>
-            <div class="viewport-fade top" aria-hidden="true"></div>
-            <div class="viewport-fade bottom" aria-hidden="true"></div>
-          </div>
-
-          <div class="wheel-rim right-rim" aria-hidden="true">
-            <span class="peg"></span>
-            <span class="peg"></span>
-            <span class="peg"></span>
-            <span class="peg"></span>
-            <span class="peg"></span>
-            <span class="peg"></span>
-            <span class="peg"></span>
-          </div>
+      <div class="wheel-scene">
+        <div class="wheel-panel">
+          <canvas id="wheelCanvas" width="640" height="720" aria-label="Coding tools spin wheel"></canvas>
+          <p class="sr-only" id="liveSelected" aria-live="polite"></p>
         </div>
 
         <div class="pointer-stack">
@@ -50,16 +32,18 @@
           <div class="pointer-arrow" aria-hidden="true"></div>
           <button type="button" class="open-btn" id="openBtn" disabled>
             <span class="open-btn-glow" aria-hidden="true"></span>
-            <span class="open-btn-label">Open Coding Tool</span>
+            <span>Open Coding Tool</span>
           </button>
         </div>
       </div>
 
       <p class="hint" id="hint">Swipe or drag the wheel up or down</p>
-      <p class="selected-meta" id="selectedMeta" aria-live="polite"></p>
+      <p class="selected-meta" id="selectedMeta"></p>
     </main>
   </div>
 
+  <!-- Plain HTML page + JavaScript (no frameworks) -->
+  <script src="tools.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
