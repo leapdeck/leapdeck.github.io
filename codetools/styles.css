@@ -97,7 +97,7 @@ body {
   /* 40% narrower than previous min(58vw, 360px) */
   width: min(34.8vw, 216px);
   /* Tall enough to show 11 tool names (prior 5-slot height * 11/5) */
-  height: calc(min(34.8vw, 216px) * 1.125 * 1.9 * 11 / 5);
+  height: calc(min(34.8vw, 216px) * 1.125 * 1.9 * 7 / 5);
   max-height: none;
   touch-action: none;
   cursor: grab;
@@ -249,7 +249,7 @@ body {
   #wheelCanvas {
     /* 40% narrower; tall enough for 11 visible tool names */
     width: min(42vw, 168px);
-    height: calc(min(42vw, 168px) * 1.125 * 1.9 * 11 / 5);
+    height: calc(min(42vw, 168px) * 1.125 * 1.9 * 7 / 5);
     flex-shrink: 0;
   }
 
