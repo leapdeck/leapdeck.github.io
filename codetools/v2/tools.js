@@ -176,11 +176,6 @@ window.CODING_TOOLS = [
     description: "Google AI development experience for building with agentic coding tools."
   },
   {
-    name: "CodeRabbit",
-    url: "https://www.coderabbit.ai/",
-    description: "AI code review assistant that comments on pull requests."
-  },
-  {
     name: "Pear AI",
     url: "https://www.trypear.ai/",
     description: "Open-source AI code editor for pair programming with models."
@@ -214,11 +209,6 @@ window.CODING_TOOLS = [
     name: "Shape",
     url: "https://www.useshape.org/",
     description: "AI-assisted tools for shaping and building software products."
-  },
-  {
-    name: "Vellum",
-    url: "https://www.vellum.ai/",
-    description: "Platform for building and evaluating AI workflows and prompts."
   },
   {
     name: "Supermaven",
