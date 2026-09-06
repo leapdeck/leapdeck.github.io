@@ -20,8 +20,8 @@
     { fill: ["#fffdf8", "#e8dfcf", "#cfc3ae"], text: "#1a1a1a" },
     { fill: ["#3d8f58", "#1f5132", "#143824"], text: "#f0d56a" }
   ];
-  const VISIBLE = 5;
-  const CENTER_PAD = Math.floor(VISIBLE / 2); // 2
+  const VISIBLE = 11;
+  const CENTER_PAD = Math.floor(VISIBLE / 2); // 5
   const TOP_INSET = 8;
 
   const state = {
@@ -285,7 +285,8 @@
   function resize() {
     const cssW = canvas.clientWidth || 360;
     // Prior aspect was 720/640; height increased by 90%
-    const cssH = Math.round(cssW * (720 / 640) * 1.9);
+    // Tall enough for 11 visible slots (prior 5-slot height * 11/5)
+    const cssH = Math.round(cssW * (720 / 640) * 1.9 * (11 / 5));
     canvas.style.height = `${cssH}px`;
     canvas.width = Math.round(cssW * state.dpr);
     canvas.height = Math.round(cssH * state.dpr);

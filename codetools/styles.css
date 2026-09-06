@@ -258,9 +258,9 @@ body {
   }
 
   #wheelCanvas {
-    /* 40% narrower than previous min(78vw, 320px); height +90% */
+    /* 40% narrower; tall enough for 11 visible tool names */
     width: min(42vw, 168px);
-    height: calc(min(42vw, 168px) * 1.125 * 1.9);
+    height: calc(min(42vw, 168px) * 1.125 * 1.9 * 11 / 5);
     flex-shrink: 0;
   }
 
