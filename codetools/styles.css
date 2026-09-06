@@ -39,23 +39,12 @@ body {
 
 .brand-bar {
   text-align: center;
+  margin-top: 30px;
   margin-bottom: 18px;
 }
 
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.brand-mark {
-  width: 52px;
-  height: auto;
-}
-
 .brand-name {
+  margin: 0;
   font-family: "Bebas Neue", sans-serif;
   font-size: clamp(2.4rem, 8vw, 3.4rem);
   letter-spacing: 0.04em;
