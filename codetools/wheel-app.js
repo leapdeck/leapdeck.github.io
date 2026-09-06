@@ -284,7 +284,8 @@
 
   function resize() {
     const cssW = canvas.clientWidth || 360;
-    const cssH = Math.round(cssW * (720 / 640));
+    // Prior aspect was 720/640; height increased by 90%
+    const cssH = Math.round(cssW * (720 / 640) * 1.9);
     canvas.style.height = `${cssH}px`;
     canvas.width = Math.round(cssW * state.dpr);
     canvas.height = Math.round(cssH * state.dpr);
