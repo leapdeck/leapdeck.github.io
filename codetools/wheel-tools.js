@@ -144,5 +144,55 @@ window.CODING_TOOLS = [
     name: "Kilo Code",
     url: "https://kilo.ai/",
     description: "AI coding agent for accelerating software development."
+  },
+  {
+    name: "Gitar",
+    url: "https://gitar.ai/",
+    description: "AI tools for code upgrades, migrations, and pull request automation."
+  },
+  {
+    name: "Mistral AI",
+    url: "https://mistral.ai/",
+    description: "Open and efficient AI models for coding and general language tasks."
+  },
+  {
+    name: "Warp",
+    url: "https://www.warp.dev/",
+    description: "AI-powered terminal built for modern developers and teams."
+  },
+  {
+    name: "SmythOS",
+    url: "https://smythos.com/",
+    description: "Platform for building and deploying AI agents and workflows."
+  },
+  {
+    name: "Xano",
+    url: "https://www.xano.com/",
+    description: "No-code backend platform for building scalable APIs and app logic."
+  },
+  {
+    name: "Google Antigravity",
+    url: "https://antigravity.google/",
+    description: "Google AI development experience for building with agentic coding tools."
+  },
+  {
+    name: "CodeRabbit",
+    url: "https://www.coderabbit.ai/",
+    description: "AI code review assistant that comments on pull requests."
+  },
+  {
+    name: "Pear AI",
+    url: "https://www.trypear.ai/",
+    description: "Open-source AI code editor for pair programming with models."
+  },
+  {
+    name: "Theia",
+    url: "https://theia-ide.org/",
+    description: "Extensible open-source IDE platform for browser and desktop."
+  },
+  {
+    name: "Traycer",
+    url: "https://traycer.ai/",
+    description: "AI coding assistant focused on planning and implementing software changes."
   }
 ];
