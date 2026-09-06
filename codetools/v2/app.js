@@ -1,12 +1,18 @@
 (() => {
   const tools = Array.isArray(window.CODING_TOOLS) ? window.CODING_TOOLS : [];
   const canvas = document.getElementById("wheelCanvas");
-  const ctx = canvas.getContext("2d");
   const openBtn = document.getElementById("openBtn");
   const selectedMeta = document.getElementById("selectedMeta");
   const liveSelected = document.getElementById("liveSelected");
   const clicker = document.getElementById("clicker");
   const hint = document.getElementById("hint");
+
+  if (!canvas || !openBtn || !selectedMeta) {
+    console.error("codetools: missing required DOM nodes");
+    return;
+  }
+
+  const ctx = canvas.getContext("2d");
 
   const SLOT_TONES = [
     { fill: ["#1a1d22", "#0a0b0d", "#15181d"], text: "#f0d56a" },
@@ -15,6 +21,8 @@
     { fill: ["#3d8f58", "#1f5132", "#143824"], text: "#f0d56a" }
   ];
   const VISIBLE = 5;
+  const CENTER_PAD = Math.floor(VISIBLE / 2); // 2
+  const TOP_INSET = 8;
 
   const state = {
     offset: 0,
@@ -26,7 +34,8 @@
     slotH: 112,
     audioCtx: null,
     dpr: Math.min(window.devicePixelRatio || 1, 2),
-    looping: false
+    looping: false,
+    selectedIndex: 0
   };
 
   function toolAt(index) {
@@ -35,14 +44,19 @@
     return tools[((index % n) + n) % n];
   }
 
+  /**
+   * Slot i is drawn at y = TOP_INSET + offset + i * slotH.
+   * Center band top is TOP_INSET + CENTER_PAD * slotH.
+   * So for index i centered: offset = (CENTER_PAD - i) * slotH
+   * and current index = CENTER_PAD - offset / slotH
+   */
   function currentIndex() {
-    const centerPad = Math.floor(VISIBLE / 2);
-    return Math.round(-state.offset / state.slotH) - centerPad;
+    if (!state.slotH) return 0;
+    return Math.round(CENTER_PAD - state.offset / state.slotH);
   }
 
   function snapOffsetForIndex(index) {
-    const centerPad = Math.floor(VISIBLE / 2);
-    return -((index + centerPad) * state.slotH);
+    return (CENTER_PAD - index) * state.slotH;
   }
 
   function ensureAudio() {
@@ -79,6 +93,7 @@
   }
 
   function bumpClicker() {
+    if (!clicker) return;
     clicker.classList.remove("tick");
     void clicker.offsetWidth;
     clicker.classList.add("tick");
@@ -123,8 +138,8 @@
 
     const label = String(tool.name).toUpperCase();
     let fontSize = Math.max(22, Math.floor(h * 0.42));
-    if (label.length > 10) fontSize = Math.max(16, Math.floor(h * 0.28));
-    else if (label.length > 7) fontSize = Math.max(18, Math.floor(h * 0.34));
+    if (label.length > 10) fontSize = Math.max(15, Math.floor(h * 0.26));
+    else if (label.length > 7) fontSize = Math.max(17, Math.floor(h * 0.32));
     ctx.fillStyle = tone.text;
     ctx.font = `700 ${fontSize}px "Bebas Neue", "Arial Black", sans-serif`;
     ctx.textAlign = "center";
@@ -143,6 +158,8 @@
     const rim = 16;
     const innerX = rim;
     const innerW = w - rim * 2;
+    const contentTop = TOP_INSET;
+    const bandY = contentTop + CENTER_PAD * state.slotH;
 
     ctx.clearRect(0, 0, w, h);
 
@@ -156,23 +173,23 @@
     ctx.fill();
 
     ctx.fillStyle = "#0d1117";
-    ctx.fillRect(innerX, 8, innerW, h - 16);
+    ctx.fillRect(innerX, contentTop, innerW, h - contentTop * 2);
 
     ctx.save();
     ctx.beginPath();
-    ctx.rect(innerX, 8, innerW, h - 16);
+    ctx.rect(innerX, contentTop, innerW, h - contentTop * 2);
     ctx.clip();
 
     const first = Math.floor(-state.offset / state.slotH) - 1;
-    for (let i = 0; i < VISIBLE + 3; i += 1) {
+    for (let i = 0; i < VISIBLE + 4; i += 1) {
       const index = first + i;
-      const y = state.offset + index * state.slotH;
+      const y = contentTop + state.offset + index * state.slotH;
       drawSlot(innerX, y, innerW, state.slotH, index);
     }
     ctx.restore();
 
-    const bandY = (h - state.slotH) / 2;
-    ctx.strokeStyle = "rgba(240, 213, 106, 0.9)";
+    // Center selection band — matches the slot that currentIndex() returns
+    ctx.strokeStyle = "rgba(240, 213, 106, 0.95)";
     ctx.lineWidth = 3;
     ctx.beginPath();
     ctx.moveTo(innerX, bandY);
@@ -180,23 +197,23 @@
     ctx.moveTo(innerX, bandY + state.slotH);
     ctx.lineTo(innerX + innerW, bandY + state.slotH);
     ctx.stroke();
-    ctx.fillStyle = "rgba(240, 213, 106, 0.08)";
+    ctx.fillStyle = "rgba(240, 213, 106, 0.1)";
     ctx.fillRect(innerX, bandY, innerW, state.slotH);
 
-    const fadeTop = ctx.createLinearGradient(0, 8, 0, h * 0.28);
-    fadeTop.addColorStop(0, "rgba(7, 9, 13, 0.88)");
+    const fadeTop = ctx.createLinearGradient(0, contentTop, 0, contentTop + state.slotH * 1.2);
+    fadeTop.addColorStop(0, "rgba(7, 9, 13, 0.9)");
     fadeTop.addColorStop(1, "rgba(7, 9, 13, 0)");
     ctx.fillStyle = fadeTop;
-    ctx.fillRect(innerX, 8, innerW, h * 0.28);
+    ctx.fillRect(innerX, contentTop, innerW, state.slotH * 1.2);
 
-    const fadeBot = ctx.createLinearGradient(0, h * 0.72, 0, h - 8);
+    const fadeBot = ctx.createLinearGradient(0, h - contentTop - state.slotH * 1.2, 0, h - contentTop);
     fadeBot.addColorStop(0, "rgba(7, 9, 13, 0)");
-    fadeBot.addColorStop(1, "rgba(7, 9, 13, 0.88)");
+    fadeBot.addColorStop(1, "rgba(7, 9, 13, 0.9)");
     ctx.fillStyle = fadeBot;
-    ctx.fillRect(innerX, h * 0.72, innerW, h * 0.28 - 8);
+    ctx.fillRect(innerX, h - contentTop - state.slotH * 1.2, innerW, state.slotH * 1.2);
 
     for (let i = 0; i < VISIBLE; i += 1) {
-      const cy = 8 + (i + 0.5) * state.slotH;
+      const cy = contentTop + (i + 0.5) * state.slotH;
       const pegGrad = ctx.createRadialGradient(w - 8, cy - 2, 1, w - 8, cy, 6);
       pegGrad.addColorStop(0, "#ff6b6b");
       pegGrad.addColorStop(0.55, "#e31c23");
@@ -216,10 +233,12 @@
     const tool = toolAt(index);
     if (!tool) return;
 
+    state.selectedIndex = index;
     selectedMeta.textContent = tool.description || "";
-    liveSelected.textContent = `Selected ${tool.name}`;
+    if (liveSelected) liveSelected.textContent = `Selected ${tool.name}`;
     openBtn.disabled = !tool.url;
     openBtn.dataset.url = tool.url || "";
+    openBtn.dataset.name = tool.name || "";
     openBtn.setAttribute("aria-label", `Open ${tool.name}`);
 
     if (!silent && index !== state.lastIndex) {
@@ -250,8 +269,8 @@
           return;
         }
 
-        state.velocity += dist * 0.08;
-        state.velocity *= 0.86;
+        state.velocity += dist * 0.1;
+        state.velocity *= 0.85;
         state.offset += state.velocity;
       }
 
@@ -270,8 +289,13 @@
     canvas.width = Math.round(cssW * state.dpr);
     canvas.height = Math.round(cssH * state.dpr);
     ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
-    state.slotH = cssH / VISIBLE;
+
+    const selected = state.selectedIndex || currentIndex() || 0;
+    // Fit exactly VISIBLE slots into the inner content area
+    state.slotH = (cssH - TOP_INSET * 2) / VISIBLE;
+    state.offset = snapOffsetForIndex(selected);
     draw();
+    syncSelection(true);
   }
 
   function onPointerDown(e) {
@@ -281,7 +305,7 @@
     state.lastY = e.clientY;
     state.lastT = performance.now();
     canvas.setPointerCapture?.(e.pointerId);
-    hint.style.opacity = "0.35";
+    if (hint) hint.style.opacity = "0.35";
     startLoop();
   }
 
@@ -304,7 +328,9 @@
   }
 
   openBtn.addEventListener("click", () => {
-    const url = openBtn.dataset.url;
+    // Always resolve from the visual center index at click time
+    const tool = toolAt(currentIndex());
+    const url = (tool && tool.url) || openBtn.dataset.url;
     if (!url) return;
     window.open(url, "_blank", "noopener,noreferrer");
   });
@@ -339,7 +365,7 @@
   window.addEventListener("resize", resize);
 
   if (!tools.length) {
-    hint.textContent = "Unable to load coding tools.";
+    if (hint) hint.textContent = "Unable to load coding tools.";
     return;
   }
 
@@ -347,5 +373,5 @@
   state.offset = snapOffsetForIndex(0);
   draw();
   syncSelection(true);
-  hint.textContent = "Swipe or drag the wheel up or down";
+  if (hint) hint.textContent = "Swipe or drag the wheel up or down";
 })();
