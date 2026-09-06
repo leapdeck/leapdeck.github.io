@@ -1,0 +1,261 @@
+:root {
+  --cream: #f4efe4;
+  --mint: #7dcf9a;
+  --red: #e31c23;
+  --green-deep: #134628;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Outfit", system-ui, sans-serif;
+  color: var(--cream);
+  background:
+    radial-gradient(ellipse 70% 55% at 25% 35%, rgba(125, 207, 154, 0.12), transparent 55%),
+    radial-gradient(ellipse 60% 45% at 85% 70%, rgba(227, 28, 35, 0.1), transparent 50%),
+    linear-gradient(160deg, #07090d 0%, #121820 45%, #0b1016 100%);
+  overflow-x: hidden;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px 40px;
+}
+
+.brand-bar {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-mark {
+  width: 52px;
+  height: auto;
+}
+
+.brand-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.4rem, 8vw, 3.4rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  background: linear-gradient(180deg, #fff 10%, var(--mint) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  margin: 6px 0 0;
+  opacity: 0.72;
+  font-size: 0.95rem;
+}
+
+.stage {
+  width: min(960px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.wheel-scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 28px);
+  width: 100%;
+}
+
+.wheel-panel {
+  position: relative;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.55));
+}
+
+#wheelCanvas {
+  display: block;
+  width: min(58vw, 360px);
+  height: auto;
+  max-height: 72vh;
+  touch-action: none;
+  cursor: grab;
+  border-radius: 18px;
+  user-select: none;
+}
+
+#wheelCanvas:active {
+  cursor: grabbing;
+}
+
+.pointer-stack {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2.5vw, 18px);
+  flex-shrink: 0;
+}
+
+.clicker {
+  width: 14px;
+  height: 28px;
+  background: linear-gradient(180deg, #f2f5f8, #8b949e);
+  border-radius: 3px;
+  transform-origin: right center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.08s ease-out;
+}
+
+.clicker.tick {
+  transform: rotate(-18deg);
+}
+
+.pointer-arrow {
+  width: 0;
+  height: 0;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-right: 38px solid var(--red);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
+}
+
+.open-btn {
+  position: relative;
+  isolation: isolate;
+  border: none;
+  cursor: pointer;
+  padding: 16px 22px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #2f7a4a 0%, var(--green-deep) 100%);
+  color: #f7fff9;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+  box-shadow:
+    0 0 0 1px rgba(125, 207, 154, 0.45),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, opacity 0.2s ease;
+  max-width: 170px;
+  line-height: 1.25;
+}
+
+.open-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.open-btn:not(:disabled):hover {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.open-btn:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+.open-btn-glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(125, 207, 154, 0.55), transparent 68%);
+  z-index: -1;
+  animation: softPulse 2.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.open-btn:disabled .open-btn-glow {
+  animation: none;
+  opacity: 0.2;
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.96);
+    filter: blur(2px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+    filter: blur(6px);
+  }
+}
+
+.hint,
+.selected-meta {
+  margin: 0;
+  text-align: center;
+}
+
+.hint {
+  font-size: 0.92rem;
+  opacity: 0.65;
+}
+
+.selected-meta {
+  max-width: 420px;
+  font-size: 0.95rem;
+  color: rgba(244, 239, 228, 0.88);
+  min-height: 1.4em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .wheel-scene {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  #wheelCanvas {
+    width: min(78vw, 320px);
+  }
+
+  .pointer-stack {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .open-btn {
+    max-width: none;
+    min-width: 180px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .open-btn-glow {
+    animation: none;
+    opacity: 0.7;
+  }
+
+  .clicker {
+    transition: none;
+  }
+}
