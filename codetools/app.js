@@ -121,14 +121,18 @@
     ctx.fillStyle = pegGrad;
     ctx.fill();
 
+    const label = String(tool.name).toUpperCase();
+    let fontSize = Math.max(22, Math.floor(h * 0.42));
+    if (label.length > 10) fontSize = Math.max(16, Math.floor(h * 0.28));
+    else if (label.length > 7) fontSize = Math.max(18, Math.floor(h * 0.34));
     ctx.fillStyle = tone.text;
-    ctx.font = `700 ${Math.max(28, Math.floor(h * 0.42))}px "Bebas Neue", "Arial Black", sans-serif`;
+    ctx.font = `700 ${fontSize}px "Bebas Neue", "Arial Black", sans-serif`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.shadowColor = "rgba(0,0,0,0.45)";
     ctx.shadowBlur = 8;
     ctx.shadowOffsetY = 3;
-    ctx.fillText(String(tool.name).toUpperCase(), x + w / 2, y + h / 2 - 1);
+    ctx.fillText(label, x + w / 2, y + h / 2 - 1);
     ctx.shadowBlur = 0;
     ctx.shadowOffsetY = 0;
   }
