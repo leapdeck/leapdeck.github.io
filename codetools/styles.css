@@ -242,24 +242,36 @@ body {
 
 @media (max-width: 700px) {
   .wheel-scene {
-    flex-direction: column;
-    gap: 14px;
-    padding: 18px 16px;
+    /* Keep button to the right of the wheel on mobile */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 12px;
+    width: min(100%, 420px);
   }
 
   #wheelCanvas {
     /* 40% narrower than previous min(78vw, 320px) */
-    width: min(46.8vw, 192px);
+    width: min(42vw, 168px);
+    flex-shrink: 0;
   }
 
   .pointer-stack {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    gap: 8px;
   }
 
   .open-btn {
-    max-width: none;
-    min-width: 108px;
+    max-width: 96px;
+    min-width: 0;
+    padding: 9px 11px;
+    font-size: 0.55rem;
   }
 }
 
