@@ -107,7 +107,7 @@ window.CODING_TOOLS = [
   },
   {
     name: "OpenHands",
-    url: "https://docs.openhands.dev/overview/introduction",
+    url: "https://www.openhands.dev",
     description: "Open-source platform for AI software development agents."
   },
   {

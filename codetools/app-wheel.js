@@ -231,7 +231,8 @@
     if (!url) return "";
     return String(url)
       .replace(/^https?:\/\//i, "")
-      .replace(/^www\./i, "");
+      .replace(/^www\./i, "")
+      .replace(/\/$/, "");
   }
 
   function syncSelection(silent) {
