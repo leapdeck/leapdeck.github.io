@@ -239,5 +239,10 @@ window.CODING_TOOLS = [
     name: "Meta Muse",
     url: "https://developer.meta.com/ai/lp/muse-code/",
     description: "Meta AI Muse for building and shipping code with generative AI."
+  },
+  {
+    name: "OpenCode AI",
+    url: "https://opencode.ai/",
+    description: "Open-source AI coding agent for building software in the terminal."
   }
 ];
