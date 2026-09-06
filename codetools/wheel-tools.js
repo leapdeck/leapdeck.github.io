@@ -41,7 +41,7 @@ window.CODING_TOOLS = [
     description: "AI-powered code editor built for pair programming with models."
   },
   {
-    name: "Gemini",
+    name: "Gemini (Google)",
     url: "https://gemini.google.com",
     description: "Google's AI assistant for coding help, reasoning, and generation."
   },
